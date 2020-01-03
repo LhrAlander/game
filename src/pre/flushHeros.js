@@ -39,7 +39,6 @@ function flushHeros() {
           console.log(common[key])
         }
       }
-      console.log(common.length)
       Hero
         .sync({force: true})
         .then(() => {
