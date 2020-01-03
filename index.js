@@ -1,2 +1,3 @@
-const {patchGoodsName} = require('./src/test/goodsNameCompare')
-patchGoodsName()
+const {flushGoods} = require('./src/pre/flushGoods')
+
+flushGoods()

@@ -21,7 +21,11 @@ Goods.init({
   name: {
     unique: true,
     type: Sequelize.STRING(255),
-    allowNull: false
+    allowNull: false,
+  },
+  chinesename: {
+    type: Sequelize.STRING(255),
+    allowNull: false,
   },
   c5id: {
     unique: false,
@@ -32,6 +36,18 @@ Goods.init({
     unique: false,
     type: Sequelize.STRING(45),
     allowNull: true
+  },
+  c5sellprice: {
+    type: Sequelize.DOUBLE
+  },
+  c5purchaseprice: {
+    type: Sequelize.DOUBLE
+  },
+  buffsellprice: {
+    type: Sequelize.DOUBLE
+  },
+  buffpurchaseprice: {
+    type: Sequelize.DOUBLE
   }
 }, {
   sequelize,

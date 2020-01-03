@@ -37,18 +37,25 @@ function flushGoodsByHero(hero) {
       buffGetGoods(hero.buffname),
       Goods.destroy({where: {heroname: hero.name}})
     ])
-      .then(([c5, buff]) => {
+      .then(([c5Goods, buffGoods]) => {
+        Object
+          .keys(buffGoods)
+          .forEach(name => {
+            if (c5Goods[name]) {
+              goods.push({
+                name,
+                heroname: hero.name,
+                chinesename: buffGoods[name].name,
+                c5sellprice: +c5Goods[name].sellPrice,
+                c5purchaseprice: +c5Goods[name].purchasePrice,
+                buffsellprice: +buffGoods[name].sellPrice,
+                buffpurchaseprice: +buffGoods[name].purchasePrice,
+                c5id: c5Goods[name].id,
+                buffid: buffGoods[name].id
+              })
+            }
+          })
         console.timeEnd(`查询${hero.name}`)
-        for (let key in c5) {
-          if (key in buff) {
-            goods.push({
-              heroname: hero.name,
-              name: key,
-              c5id: c5[key],
-              buffid: buff[key]
-            })
-          }
-        }
         console.log(`${hero.name}：${goods.length}件饰品`)
         Goods.bulkCreate(goods)
           .then(res => {

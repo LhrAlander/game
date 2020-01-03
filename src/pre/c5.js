@@ -71,21 +71,44 @@ function getAllGoodsByHero(name) {
                 totalPage = 1
               }
               const _goods = $(config.heroGoodsPath)
-              if (_goods) {
-                _goods.each(function (i, good) {
-                  let id = $(this).attr('href').match(/\/(\d*)-/)[1]
-                  let name = $(this).find('span').text()
-                  if (goods[name] && goods[name].id !== id) {
-                    console.log('已存在饰品', goods[name], name, id)
-                  } else {
-                    // goods[name] = id
-                    goods[name] = {
-                      hashName: name,
-                      id
-                    }
+              _goods.each(function (i, good) {
+                let id = $(this).find('p.name a').attr('href').match(/\/(\d*)-/)[1]
+                let name = $(this).find('p.name a span').text()
+                let price = $(this).find('p.info .price').text().match(/￥?\s*([^\s]*)/)[1]
+                if (goods[name] && goods[name].id !== id) {
+                  console.log('已存在饰品', goods[name], name, id)
+                } else if (goods[name]) {
+                  goods[name].sellPrice = +price
+                } else {
+                  // goods[name] = id
+                  goods[name] = {
+                    hashName: name,
+                    id,
+                    sellPrice: +price,
+                    purchasePrice: -1
                   }
-                })
-              }
+                }
+              })
+              const _purchaseGoods = $(config.heroGoodsPurchasePath)
+              _purchaseGoods.each(function (i, good) {
+                let id = $(this).find('p.name a').attr('href').match(/\/(\d*)-/)[1]
+                let name = $(this).find('p.name a span').text()
+                let price = $(this).find('p.info .price').text().match(/￥?\s*([^\s]*)/)[1]
+                if (goods[name] && goods[name].id !== id) {
+                  console.log('已存在饰品', goods[name], name, id)
+                } else if (goods[name]) {
+                  goods[name].purchasePrice= +price
+                } else {
+                  // goods[name] = id
+                  goods[name] = {
+                    hashName: name,
+                    id,
+                    sellPrice: 20000,
+                    purchasePrice: +price,
+                  }
+                }
+
+              })
               resolve()
             } catch (err) {
               reject(err)
