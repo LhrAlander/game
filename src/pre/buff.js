@@ -160,3 +160,10 @@ module.exports = {
   getHeros,
   getAllGoodsByHero
 }
+
+const record = {
+  status: 'refuse',
+  name: '咆哮之心',
+  sellPrice: '2.34',
+  purchaisePrice: '1.89'
+}
