@@ -3,7 +3,7 @@ const cheerio = require('cheerio')
 const {buff: config} = require('../../config')
 const login = require('../login/buff')
 
-let cookie = ''
+let cookie = 'Device-Id=3OBnSes5n34j9qh0KcIS; _ga=GA1.2.782036338.1578472788; nts_mail_user=13588737694@163.com:-1:1; _ntes_nnid=35705b8909ec2bcc23b5c0acdaf138a5,1578534068920; _ntes_nuid=35705b8909ec2bcc23b5c0acdaf138a5; NTES_SESS=KZ0gCrbWnqoRX6B2J1Im4l.q2haMFIBBWbCzbuw09nunqC5iqgFBt6tgNBOcrQKm9BN9Mh2UzbF3Hsh93zVUTx4OsCMFRqLiDcMrfJJVqaVD1bZsgEfJhNSTWo97JoAHR9Xy0kct.1S_HSS8figoxCyjrewu6JtuPNpH2cZfsSi.l5p_AlmCqMka.hgAFtEsbaVX52f.5CAtkI0xJzgLFUTsRvg503ffo; S_INFO=1578877794|0|3&80##|m13588737694; P_INFO=m13588737694@163.com|1578877794|0|mail163|00&99|null&null&null#zhj&330100#10#0#0|135694&1|mail163|13588737694@163.com; Locale-Supported=zh-Hans; game=csgo; _gid=GA1.2.1999020138.1578880386; session=1-_4RnMw_Wr9WmeOYJlgNooXtUEfuiIhjud_FmujyTInow2046469057; csrf_token=Ijc4NzYzNzkyODNmYzMwNzVmM2EzMzliYTYyM2RhNDgxOGQ2MzVmZTMi.EP1fsQ.t-8DJvqJ0TM_gyxU4N17qYApDSw'
 
 function getHeros() {
   return new Promise((res, rej) => {
@@ -159,11 +159,4 @@ function getAllGoodsByHero(name) {
 module.exports = {
   getHeros,
   getAllGoodsByHero
-}
-
-const record = {
-  status: 'refuse',
-  name: '咆哮之心',
-  sellPrice: '2.34',
-  purchaisePrice: '1.89'
 }

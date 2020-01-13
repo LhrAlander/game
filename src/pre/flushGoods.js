@@ -74,12 +74,10 @@ function flushGoodsByHero(hero) {
 
 async function flushGoods() {
   const heros = await getAllHeros()
-  // await Goods.sync({ force: true })
   function _next() {
     if (heros.length) {
       flushGoodsByHero(heros.shift())
         .then(() => {
-          // setTimeout(_next, 1000)
           _next()
         })
         .catch(err => {

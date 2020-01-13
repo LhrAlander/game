@@ -1,12 +1,9 @@
 const puppeteer = require('puppeteer')
-const SteamBot = require('../../../steamAPI/src/scripts/Steam')
-const account = require('../../../steamAPI/src/config/accounts/alanderlt')
 
-function login() {
+function login(bot) {
   const url = `https://www.c5game.com/api/passport/steam.json?proxy_switch=1`
   return new Promise(async (gRes, gRej) => {
     try {
-      let bot = new SteamBot(account.userName, account.password, account.sharedSecret, account.identitySecret)
       const browser = await puppeteer.launch({
         headless: false,
         defaultViewport: {
@@ -17,8 +14,8 @@ function login() {
       const page = await browser.newPage()
       await page.goto(url)
       await page.waitFor('#steamAccountName')
-      await page.type('#steamAccountName', account.userName, {delay: 100})
-      await page.type('#steamPassword', account.password, {delay: 100})
+      await page.type('#steamAccountName', bot.username, {delay: 100})
+      await page.type('#steamPassword', bot.password, {delay: 100})
       await page.click('#imageLogin')
       await page.waitFor('#twofactorcode_entry', {visible: true})
       let code = await bot.get2faCode()
@@ -34,8 +31,5 @@ function login() {
     }
   })
 }
-
-login()
-  .then(console.log.bind(console))
 
 module.exports = login

@@ -1,0 +1,2765 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+/*<![CDATA[*/
+body{background: url("https://static.c5game.com/images/CSGO/cs-bg2.jpg?v=20200110135322") center 0 no-repeat;
+/*]]>*/
+</style>
+<script type="text/javascript" src="https://static.c5game.com/assets/script-0-n4f7Zj-LQJo0QGM35_cs8Q.js"></script>
+<title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=1200, user-scalable=1" id="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta property="qc:admins" content="214152063763571556375"/>
+    <meta property="og:image" content="https://www.c5game.com/images/c5logo-big.png">
+    <link rel="Shortcut Icon" href="/images/logo.png" type="image/x-icon">
+                        <script type="text/javascript" src="https://static.c5game.com/js/common.min.js"></script><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/common.min.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/bootstrap.skin.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/bootstrap.vertical.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/head-foot.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/iconfont.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/jedate.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/common.css?v=20200110135322" /><link rel="stylesheet" type="text/css" href="https://static.c5game.com/css/index.css?v=20200110135322" />    <style>
+        .know-content {
+            padding: 30px 10px;
+            text-align:left!important;
+            border-bottom: 1px solid #696f87;
+        }
+        .know-content .rgb228{
+            color: rgb(228,179,90);
+        }
+        .know-footer{
+            padding: 15px;
+            overflow: hidden;
+        }
+        .know-footer #buy-know-notice {
+            float: left;
+        }
+        .know-footer #buy-know-confirm {
+            float: right;
+        }
+        .cardInfo {
+            width: 380px;
+            height: 84px;
+            padding: 15px;
+            background: url('../../../../images/insurance/bg.png');
+        }
+    </style>
+    <script>
+        var Config = {
+            BaseUrl: "",
+            API: "/api.html",
+            Version: "1.0.0",
+            Lang: "en",
+            Mobile: false,
+            MobileUrl: "https://m.c5game.com",
+            UID:"554100987",
+            Visible: true,
+            Gateway: "http://open.c5game.com",
+            staticDomain: "https://static.c5game.com",
+            C5SteamHost: "https://steamproxy.net/",
+            appVersion: "20200110135322",
+            WEBSCOKETHOST: "wss://swoole.c5game.com:10101",            
+            C5BaseUrl: 'https://www.c5game.com',
+        };
+
+        document.addEventListener('visibilitychange', function () {
+
+            if (typeof document.visibilityState !== 'undefined') {
+
+                if (document.visibilityState == 'hidden') {
+                    Config.Visible = false;
+                } else {
+                    Config.Visible = true;
+                }
+
+            }
+
+        });
+
+    </script>
+</head>
+<body><script type="text/javascript" src="https://static.c5game.com/assets/script-1-fHUI5IYwr5eEO_WKrJyMSQ.js"></script>
+
+
+<div id="header" class="clearfix" style="position: fixed; z-index: 999;top: 0;">
+    <div id="site-nav" style="position:relative;">
+        <img src="/images/c5logo-big.png" style="position:absolute;visibility: hidden"
+             alt="c5logo">
+        <h1 class="logo "><a href="/"><span><img
+                            src="/images/c5logoen.png"
+                            alt=""></span></a></h1>
+        <div class="pull-right">
+            <div class="language-select">
+                <!-- <ul class="pull-right " role="menu" style="margin-top: 7px;">
+                    <li class=""><a
+                                href=""><img
+                                    src="/images/china.jpg" title="中文" alt="China"
+                                    width="16px"
+                                    height="16px"><span>中文</span></a></li>
+                    <li class=""><a
+                                href=""><img
+                                    src="/images/english.jpg" title="English"
+                                    alt="English" width="16px"
+                                    height="16px"><span>中文</span></a></li>
+                    <li class=""><a
+                                href=""><img
+                                    src="/images/germany.jpg" title="Deutsch"
+                                    alt="Deutsch" width="16px"
+                                    height="16px"><span>中文</span></a></li>
+                </ul> -->
+                                    <img src="/images/english.jpg" itle="english" alt="english" width="16px" height="12px">
+                                    <div class="language-chose ft-12">
+                        <div class="language-up">
+                        </div>
+                        <div class="language-chose-body">
+                            <a  href="/user.html?locale=zh" class="zchinese">
+                                <img src="/images/china.jpg" title="简体中文" alt="China" width="16px" height="12px">
+                                <span>简体中文<span>
+                            </a>
+                            <a href="/user.html?locale=tc" class="tchinese">
+                                <img src="/images/china.jpg" title="繁體中文" alt="China" width="16px" height="12px">
+                                <span>繁體中文<span>
+                            </a>
+                            <a href="/user.html?locale=en" class="active">
+                                <img src="/images/english.jpg" title="english" alt="english" width="16px" height="12px">
+                                <span>English<span>
+                            </a>
+                            <a href="/user.html?locale=de" class="">
+                                <img src="/images/germany.jpg" title="germany" alt="germany" width="16px" height="12px">
+                                <span>Deutsch<span>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+            
+            <em style="display: inline-block;width: 1px;height: 12px;background-color: #999;margin: 0 5px;position: relative;top: 2px;"></em>
+
+            <div style="display: inline-block;position: relative;">
+                <a href="https://new.c5game.com" class="ft-gold top-1">前往新版</a>
+                                    
+                                    <div id="new-home" style="position: absolute;top: 21px;right: 0;width: 147px;height: 45px;background: url('/images/new-home-bg.png') no-repeat;">
+                        <p style="margin-top: 12px;" class="ft-gold mb-0 text-center">
+                            <span class="ft-12">全新首页 全新体验！</span>
+                            <span class="iconfont shut" style="cursor: pointer;">&#xe67a;</span>
+                        </p>
+                    </div>
+                            </div>
+        </div>
+        <div id="login-cpanl" class="user-info"></div>
+    </div>
+    <div id="page-nav">
+        <ul class="nav-links">
+                        
+            <li class=" ">
+                <a href="https://www.c5game.com">Home</a>
+            </li>
+
+                            <li class="  ">
+                    <a href=" /dota.html "> DOTA2 </a>
+                                    </li>
+                            <li class="  ">
+                    <a href=" /csgo.html "> CS:GO </a>
+                                    </li>
+                            <li class="  ">
+                    <a href=" /market/433850.html "> Z1 </a>
+                                    </li>
+                            <li class="  ">
+                    <a href=" /market/252490.html "> Rust </a>
+                                    </li>
+                            <li class="  main-drop-nav dropdown  ">
+                    <a href=" /market/440.html "> Team Fortress 2<b class="caret"></b> </a>
+                                            <ul class="dropdown-menu">
+                                                            <li class="  ">
+                                    <a href=" /market/753.html "> Steam </a>
+                                </li>
+                                                            <li class="  ">
+                                    <a href=" /market/218620.html "> 收获日2 </a>
+                                </li>
+                                                    </ul>
+                                    </li>
+            
+                
+                    <li class=" " style="position: relative;"> 
+                        <a target="_blank" href="/collocation/suit.html">
+                            <img src="/images/nav-dotasuit.gif" style="position: absolute;top: -24px;left: -9px;" draggable="false">
+                            DOTA2搭配秀                        </a>
+                    </li>
+
+                
+                        <li class=" ">
+                <a style="position:relative" href="/activity/grab.html">抢卡游戏                                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="/steam/game.html">CDK&amp游戏</a>
+            </li>
+
+
+                        <li class="  ">
+                <a style="position:relative" href="/playground/case.html">Cases<img style="right: -30px;top: -15px;" class="hot" src="/images/hot-icon2.png" alt=""></a>
+            </li>
+            
+            <li style="position:relative;overflow: visible"
+                class=" "><a
+                        href="/wiki/dota2.html">News</a>
+            </li>
+
+            <!-- <li  class=" ">
+                <a href=""></a>
+            </li> -->
+
+            <li class="  ">
+                <a href="/user/inventory/withdraw.html">Inventory</a>
+            </li>
+
+            <li class=" current">
+                <a href="/user.html">Profile</a>
+            </li>
+
+                            <li class="  ">
+                    <a href="/user/compensate/account.html">Beans Market</a>
+                </li>
+            
+                    </ul>
+    </div>
+</div>
+
+<div class="container">
+            <div class="top-notice top-notice-common" datas-tpl="top-notice-tpl" data-url="/api/notice.json">
+            <script id="top-notice-tpl" type="text/html">
+                {{if status == 200 }}
+                <!-- <p id="top-notice-content" class="ft-pink">
+                        <span class="mr-20 pl-5" style="color:#B3A6A0;position: absolute;left:0"><span
+                                    class="glyphicon glyphicon-exclamation-sign mr-5"></span>Notice</span>
+                    <span>
+                            {{if body.url}}
+                            <a href="{{body.url}}" class="ft-pink" target="_blank">{{message}}</a>
+                            {{else}}
+                            {{message}}
+                            {{/if}}
+                        </span>
+                    <a class="pull-right notice-remove" data-time="{{time}}"
+                       style="display: inline-block;height: 20px;position:absolute; right: 10px;"><span
+                                class="glyphicon glyphicon-remove"></span></a>
+                </p> -->
+
+                <div id="top-notice-content" class="ft-pink">
+                    <span class="mr-20 pl-5" style="color:#B3A6A0;position: absolute;left:0">
+                        <span class="glyphicon glyphicon-exclamation-sign mr-5"></span>
+                        Notice 
+                    </span>
+                    <div style="height:25px;">
+                        <div class="carousel vertical slide" id="slidershow" data-ride="carousel" data-interval="10000" data-wrap="true">
+                            <!--图片容器-->
+                            <div class="carousel-inner">
+                                {{each body.list as list i}}
+                                    <div class="item {{i == 0 ? 'active' : ''}}" data-id="{{ list.id }}">
+                                    {{if list.url}}
+                                        <a href="{{list.url}}" class="ft-pink" target="_blank">{{list.msg}}</a>
+                                    {{else}}
+                                        {{list.msg}}
+                                    {{/if}}
+                                    <a class="pull-right notice-remove" data-id="{{ list.id }}" style="display: inline-block;height: 20px;position:absolute; right: 10px;">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                        </a>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {{/if}}
+            </script>
+        </div>
+        <style>
+    .sellCount {
+        width: 32px;
+        text-align: center;
+        height: 16px;
+        line-height: 15px;
+        font-size: 12px;
+        border-radius: 8px;
+        background-color: #e4b35a;
+        color: #1b1f29;
+        margin-top: -32px;
+        margin-right: 90px;
+    }
+    .sellCount i {
+        font-style: normal;
+        padding-right: 0;
+    }
+
+    .account-left-nav li {
+        height: 50px! important;
+        line-height: 50px !important;
+    }
+    .account-left-nav li a {
+        color: #c5cde7;
+    }
+</style>
+    <div id="content">
+        <div class="account-left" style="padding-bottom:30px;background:#1b1f29">
+
+            
+            
+            <ul class="account-left-nav">
+                                    <li class="nav1" data-onlyid='myAccount' style='background-image:none;padding:0 20px;overflow:hidden;background-color: #1b1f29;border:none;position: relative;'>
+                            <div class='pull-left'>
+                                <!-- <span class='iconfont' style='font-size:18px;margin-right:10px'>
+                                                                        &#xe6d0;
+                                                                        &#xe6d3;
+                                                                        &#xe6d4;
+                                                                        &#xe6d1;
+                                                                    </span> -->
+                            </div>
+                            <div class='pull-left' style="color: #75849b;font-size: 14px;position: relative;z-index: 9;background: #1b1f29;width:70px;text-align:center">
+                                                                    账户中心
+                                                                </div>
+                            <a class="down extend pull-right" style="display: inline-block;margin-right: 30px;" href="javascript:void(0)" data-sign='myAccount'></a>
+                            <span style="width: 100%;border-bottom: 1px solid #364156;height: 25px;position: absolute;top: 0px;left: 0px;"></span>
+                    </li>
+                    <ul class='extend-ul' id='myAccount'>
+                                                            <li class="nav1 active  extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user.html'>
+                                    <a href="/user.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6eb;</span>
+
+                                                                                Profile                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav5   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/setting.html'>
+                                    <a href="/user/setting.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6e6;</span>
+
+                                                                                Settings                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav4   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/inventory/withdraw.html'>
+                                    <a href="/user/inventory/withdraw.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6ed;</span>
+
+                                                                                Inventory                                    </a>
+                                                                                                                                            </li>
+                                                </ul>
+                                    <li class="nav2" data-onlyid='decorateTrade' style='background-image:none;padding:0 20px;overflow:hidden;background-color: #1b1f29;border:none;position: relative;'>
+                            <div class='pull-left'>
+                                <!-- <span class='iconfont' style='font-size:18px;margin-right:10px'>
+                                                                        &#xe6d0;
+                                                                        &#xe6d3;
+                                                                        &#xe6d4;
+                                                                        &#xe6d1;
+                                                                    </span> -->
+                            </div>
+                            <div class='pull-left' style="color: #75849b;font-size: 14px;position: relative;z-index: 9;background: #1b1f29;width:70px;text-align:center">
+                                                                    饰品交易
+                                                                </div>
+                            <a class="down extend pull-right" style="display: inline-block;margin-right: 30px;" href="javascript:void(0)" data-sign='decorateTrade'></a>
+                            <span style="width: 100%;border-bottom: 1px solid #364156;height: 25px;position: absolute;top: 0px;left: 0px;"></span>
+                    </li>
+                    <ul class='extend-ul' id='decorateTrade'>
+                                                            <li class="nav2   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/sell/index.html'>
+                                    <a href="/user/sell/index.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6e4;</span>
+                                                                                我的出售                                    </a>
+                                                                                                                                                                                                                        </li>
+                                                            <li class="nav8   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/order/buyerHistory.html'>
+                                    <a href="/user/order/buyerHistory.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe705;</span>
+                                                                                我的购买                                    </a>
+                                                                                                                                                                                                                        </li>
+                                                            <li class="nav3   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/purchase/index.html'>
+                                    <a href="/user/purchase/index.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe739;</span>
+
+                                                                                Purchase                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav9   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/dicker/send.html'>
+                                    <a href="/user/dicker/send.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 mr-15">&#xe701;</span>
+
+                                                                                还价管理                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav11   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/cloudService.html'>
+                                    <a href="/user/cloudService.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe7b2;</span>
+
+                                                                                交易助手                                    </a>
+                                                                                                                                                                                                                        </li>
+                                                </ul>
+                                    <li class="nav10" data-onlyid='cdKey' style='background-image:none;padding:0 20px;overflow:hidden;background-color: #1b1f29;border:none;position: relative;'>
+                            <div class='pull-left'>
+                                <!-- <span class='iconfont' style='font-size:18px;margin-right:10px'>
+                                                                        &#xe6d0;
+                                                                        &#xe6d3;
+                                                                        &#xe6d4;
+                                                                        &#xe6d1;
+                                                                    </span> -->
+                            </div>
+                            <div class='pull-left' style="color: #75849b;font-size: 14px;position: relative;z-index: 9;background: #1b1f29;width:70px;text-align:center">
+                                                                    游戏商城
+                                                                </div>
+                            <a class="down extend pull-right" style="display: inline-block;margin-right: 30px;" href="javascript:void(0)" data-sign='cdKey'></a>
+                            <span style="width: 100%;border-bottom: 1px solid #364156;height: 25px;position: absolute;top: 0px;left: 0px;"></span>
+                    </li>
+                    <ul class='extend-ul' id='cdKey'>
+                                                            <li class="nav10 is-verify hide   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/game/index.html'>
+                                    <a href="/user/game/index.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6e7;</span>
+
+                                                                                上架管理                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav10 is-verify hide   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/game/sell.html'>
+                                    <a href="/user/game/sell.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6e3;</span>
+
+                                                                                Sell History                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav10   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/game/buy.html'>
+                                    <a href="/user/game/buy.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2" style="margin-right: 10px;">&#xe6ec;</span>
+
+                                                                                Buy History                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav6 no-verify   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/game/approve.html'>
+                                    <a href="/user/game/approve.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe72f;</span>
+
+                                                                                商家认证                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav10 is-verify hide   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/game/approve.html'>
+                                    <a href="/user/game/approve.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe72f;</span>
+
+                                                                                Cancel Certification                                    </a>
+                                                                                                                                            </li>
+                                                </ul>
+                                    <li class="nav12" data-onlyid='other' style='background-image:none;padding:0 20px;overflow:hidden;background-color: #1b1f29;border:none;position: relative;'>
+                            <div class='pull-left'>
+                                <!-- <span class='iconfont' style='font-size:18px;margin-right:10px'>
+                                                                        &#xe6d0;
+                                                                        &#xe6d3;
+                                                                        &#xe6d4;
+                                                                        &#xe6d1;
+                                                                    </span> -->
+                            </div>
+                            <div class='pull-left' style="color: #75849b;font-size: 14px;position: relative;z-index: 9;background: #1b1f29;width:70px;text-align:center">
+                                                                    其他栏目
+                                                            </div>
+                            <a class="down extend pull-right" style="display: inline-block;margin-right: 30px;" href="javascript:void(0)" data-sign='other'></a>
+                            <span style="width: 100%;border-bottom: 1px solid #364156;height: 25px;position: absolute;top: 0px;left: 0px;"></span>
+                    </li>
+                    <ul class='extend-ul' id='other'>
+                                                            <li class="nav9   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/message/notify.html'>
+                                    <a href="/user/message/notify.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6e5;</span>
+
+                                                                                Message                                    </a>
+                                                                                                                                            </li>
+                                                            <li class="nav7   extend-ul-li pull-left"
+                                    style='background-image:none;padding:0;background-color: #1b1f29;border:none;height:50px'
+                                    data-href='/user/coupons.html'>
+                                    <a href="/user/coupons.html" style="display:block;height:50px;padding:0 60px;">
+                                                                                    <span class="icon iconfont ft-18 top-2 mr-15">&#xe6e8;</span>
+
+                                                                                Coupon                                    </a>
+                                                                                                                                            </li>
+                                                </ul>
+                            </ul>
+
+
+            <!--红包弹框-->
+            <div class="modal fade" id="new-red-p" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-middle">
+                        <div class="modal-content">
+                            <div class="not-open">
+                                <a href="javascript:void(0)" id="red-open-btn">Open</a>
+                            </div>
+                            <div class="opened text-center hide">
+                                <p class="ft-white ft-14 coupon-name">￥1优惠券</p>
+                                <div class="mb-10">
+                                    <img width="150" class="csgo-img-bg" src="/images/user/coupon1.png" alt="cash-icon">
+                                </div>
+                                <a href="javascript:void(0)" class="btn btn-gold" data-dismiss="modal">OK</a>
+                            </div>
+                            <script>
+                                $('#red-open-btn').on('click',function () {
+                                    $('.not-open').addClass('hide');
+                                    $('.opened').removeClass('hide');
+                                })
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // $('.extend-ul').each(function(el){
+                //     if($(this).find('.extend-ul-li').hasClass('active')){
+                //         $(this).show().addClass('active');
+                //         var id = $(this).prop('id');
+                //         $('.extend').each(function(el){
+                //             if($(this).data('sign')==id){
+                //                 $(this).removeClass('down').addClass('up').html('<span class="iconfont ft-12">&#xe61c;</span>');
+                //             }
+                //         });
+                //         $('[data-onlyid='+id+']').addClass('active');
+                //     }
+                // });
+
+                // $('.extend-li').on('click',function(){
+                //     var id = $(this).data('onlyid');
+                //     var $extend = $(this).find('.extend');
+                //     if($extend.hasClass('down')){//展开
+                //         // $('#'+id).stop().show().siblings('.extend-ul').stop().hide();
+                //         $('#'+id).stop().show();
+                //         $extend.removeClass('down').addClass('up').html('<span class="iconfont ft-12">&#xe61c;</span>');
+                //     //    $(this).closest('li').siblings('li').find('.extend.up').removeClass('up').addClass('down').html('<span class="iconfont ft-18 icon">&#xe617;</span>');
+                //     }else if($extend.hasClass('up')){//收起
+                //         $('#'+id).hide();
+                //         $extend.removeClass('up').addClass('down').html('<span class="iconfont ft-12 icon">&#xe61b;</span>');
+                //     }
+                // })
+
+                $('.extend-ul-li').on('click',function(){
+                    var href  = $(this).data('href');
+
+                    window.location.href = href;
+                })
+
+                //是否是cdkey卖家
+                $.ajax({
+                    url: '/api/steam/isBusiness.json',
+                    type: 'GET',
+                    data: {},
+                    dataType: 'json',
+                    success: function (result) {
+                        if(result.body.is_seller == true){//认证过
+                            $('.is-verify').removeClass('hide');
+                            $('.no-verify').addClass('hide');
+                        }else{
+                            $('.is-verify').addClass('hide');
+                            $('.no-verify').removeClass('hide');
+                        }
+                    },
+                    error: function () {
+
+                    }
+                });
+        </script>
+        </div>
+        <style>
+    .account-amount .amount1,
+    .account-amount .amount2,
+    .account-amount .amount3 {
+        height: 140px;
+        background-color: #2c3040;
+    }
+    .account-amount .amount2 {
+        background-color: #232836;
+    }
+
+    /*.user-overlay .popover {
+        background-color: #2c303f;
+        box-shadow: -2px 1px 4px 0px rgba(16, 19, 24, 0.75);
+        border: 1px solid #2c303f;
+    }
+    .user-overlay .popover .arrow {
+        top: -12px;
+        border-bottom-color: rgba(16, 19, 24, 0.15);
+    }
+    .user-overlay .popover .arrow:after {
+        border-bottom-color: #2c303f;
+    }*/
+
+    .user-overlay .popover-content {
+        padding: 10px;
+    }
+</style>
+
+<div class="account-right">
+        <ul class="floor-nav">
+        <ul class="floor-nav">
+            <li class="active"><a>Profile</a></li>
+            <li><a href="/user/payment.html">Recharge</a></li>
+            <li><a href="/user/default/cash.html">Withdrawal</a></li>
+<!--            <li>--><!--</li>-->
+            <li><a href="/user/payment/charge.html">Gift Card</a></li>
+                    </ul>
+    </ul>
+    <!-- Tab panes -->
+
+    <div class="account-content">
+        <div class="alert alert-info mb-0">Withdrawal of credit card is a kind of illegal behavior, if detected by system, the account will be frozen and the material will be verified by Unionpay(verification time is 15 working days)</div>
+
+        <div class="account-amount clearfix mb-20 mt-10">
+            <div class="amount" style="width: 290px;border-right:1px solid #364156;padding-top:40px;height:138px">
+                <!-- <span></span> -->
+
+                <!-- <div>
+                    <span class="ft-orange">￥</span>
+                    <span class="ft-orange ft-28"></span>
+                </div> -->
+
+                <!--<a href="https://www.huligou.com/?hmsr=C5%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83&hmpl=&hmcu=&hmkw=&hmci=" target="_blank" class="ft-gold" style="float:right">电竞外设热卖&gt;&gt;</a>-->
+
+                <!-- <a id="new_login_modal"
+                    href="javascript:void(0)"
+                    data-href=""
+                    data-appid="10002"
+                    data-redirect="https://www.huligou.com/?hmsr=C5%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83&hmpl=&hmcu=&hmkw=&hmci="
+                    data-dismiss="modal"
+                    class="ft-gold"
+                    style="float:right">电竞外设热卖&gt;&gt;</a> -->
+                
+                <div class="media-left">
+                    <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/80/80053262dceda4e7f8575351799cf2c23430d432_full.jpg" class="img-circle" width="58" height="58" />
+                </div>
+
+                <div class="media-body media-middle">
+                    <div class="clearfix mb-5 user-overlay" style="margin-top: -3px;">
+                        <span class="pull-left ft-16 mb-0 name-ellipsis-140">大爆炸</span>
+                        <span class="j_SellerLevel gx-seller-level level1 pull-left ml-10" style="cursor: pointer;margin-top: 3px;"></span>
+                        <!-- <a href="/help.html?pid=542383150" class="ft-14 pull-right mt-5" style="position: relative;top: -1px;">规则说明</a> -->
+                    </div>
+                    <p class="ft-14" style="position: relative;">
+                        <span>荣誉值：1</span>
+                    </p>
+                                    </div>
+            </div>
+
+            <div class="amount" style="width: 180px;height:138px;padding-top:15px;padding-right:0px;">
+
+                                <p class="ft-orange ft-14" style="margin-bottom:8px;">
+                    ￥<span style="font-size: 20px;">119.8</span>
+                </p>
+
+                <p class="ft-14" style="margin-bottom:10px">Cash</p>
+                <div class="clearfix">
+                    <a href="/user/default/cash.html"
+                        class="btn btn-blue pull-left btn-cash-out mt-5 mr-10">Withdraw</a>
+
+                                            <a href="/user/payment.html" target="_blank"
+                            class="btn btn-orange pull-left mt-5">Recharge</a>
+                                    </div>
+            </div>
+            <div class="amount" style="width: 140px;padding-left:0px;height:138px;padding-top:15px;padding-right:0px;">
+                            <p class="ft-orange ft-14" style="margin-bottom:8px;">
+                    ￥<span style="font-size: 20px;">119.8</span>
+                </p>
+                <p class="ft-14">可提现余额                <a href="javascript:void(0);" class="iconfont ft-14 " style="" 
+                        data-trigger="hover" 
+                        data-toggle="popover" 
+                        data-placement="bottom" 
+                        data-html="true"
+                        data-content="<span class='ft-12'>2020.1.7起只有出售饰品所得金额可以提现，直接充值不可提现。</span>">&#xe6d7;</a>
+                </p>
+            </div>
+            <div class="amount" style="width: 160px;height:138px;padding-top:15px;padding-right:0px;">
+                
+
+                                <p class="ft-orange ft-14" style="margin-bottom:8px;">
+                    ￥<span style="font-size: 20px;">0.00</span>
+                </p>
+                <p class="ft-14 clearfix">
+                    <span class="pull-left">Locked Amount</span>
+                    <a href="javascript:void(0);" class="iconfont ft-14 ml-5" style="" 
+                        data-trigger="hover" 
+                        data-toggle="popover" 
+                        data-placement="bottom" 
+                        data-html="true"
+                        data-content="<span class='ft-12'>您发布求购时会锁定求购金额，请查看求购管理中是否有发布求购。若您未发布求购而金额被锁定，请联系客服！</span>">&#xe6d7;</a>
+                </p>
+                <!-- <p>
+                    <a href="" data-toggle="modal" data-target="#tips"
+                        class="ft-gray"></a>
+                </p> -->
+            </div>
+        </div>
+
+        <!-- 手续费-周奖励 -->
+        <!-- <div class="account-amount clearfix mb-20 mt-10" style='height: 115px'>
+            <div class="amount amount1 " style='height: 115px; width: 250px'>
+                <p>Week's Sales Amount</p>
+                <p>
+                    <span class="ft-orange">￥</span>
+                    <span class="ft-orange ft-30">1</span>
+                </p>
+
+            </div>
+
+            <div class="amount amount2" style='height: 115px; width: 520px'>
+                <p>Come on! Only left 750 CNY to get back correspondent commission<a class='pull-right'  data-toggle="modal" data-target="#activity-rules">活动规则</a></p>
+                <div class='counter-fee-progress mt-10'>
+                    <div style='width: 60%' class='counter-fee-progress-bar'></div>
+                </div>
+                <p class="mt-15">
+                    <span>上周可返金额:</span>
+                    <span class="ft-orange">￥</span>
+                    <span class="ft-orange ft-16">1</span>
+                    <a class="btn btn-blue ml-10 mb-5" data-toggle="modal" data-target="#get-week-4">领取周奖励</a>
+                </p>
+            </div>
+        </div> -->
+
+        <!--不要删！！个人中心图表内容-->
+        <div class="account-record account-pic">
+            <div class="table-title">
+                <div class="floor-nav floor-nav-title">
+                    <span class="glyphicon glyphicon-option-vertical"></span>Summary                </div>
+            </div>
+            <div class="clearfix panel-group" style="background: #222836;padding: 20px;position: relative;height:320px" id="pic-amount">
+                <div class="account-pic-title ft-18" style="width: 395px;">
+                    <span class="account-title">Total Details</span>
+                    <span class="ft-14" style="position: absolute;right:0px;bottom:0px;">今日收入：￥0</span>
+                </div>
+                <div class="account-record-list panel">
+                    <div id="main" class="panel-collapse collapse in account-pic-detail" style="width: 360px; height:230px"></div>
+                    <a href="javascript:;" class="active statistics">Total Income<span class="pull-right"><span class="stat0">-</span><span> 元</span></span></a>
+                    <a href="javascript:;" class="statistics">Total Expenditure<span class="pull-right"><span class="stat1">-</span><span> 元</span></span></span></a>
+                    <a href="javascript:;" class="statistics">Total Recharge<span class="pull-right"><span class="stat2">-</span><span> 元</span></span></span></a>
+                    <a href="javascript:;" class="statistics">Total Withdrawal<span class="pull-right"><span class="stat3">-</span><span> 元</span></span></span></a>
+                    <a href="javascript:;" class="statistics">Month's Income<span class="pull-right"><span class="stat4">-</span><span> 元</span></span></span></a>
+                    <a href="javascript:;" class="statistics">Month's Expenditure<span class="pull-right"><span class="stat5">-</span><span> 元</span></span></span></a>
+                    <a href="javascript:;" class="statistics">Month's Recharge<span class="pull-right"><span class="stat6">-</span><span> 元</span></span></span></a>
+                    <a href="javascript:;" class="statistics">Month's Withdrawal<span class="pull-right"><span class="stat7">-</span><span> 元</span></span></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="account-record">
+            <ul class="floor-nav" role="tablist" style="overflow:visible">
+                <a href="/user.html?type=1">
+                    <li role="presentation"
+                        class="active">Account Flow</li>
+                </a>
+                <a href="/user.html?type=2">
+                    <li role="presentation"
+                        class="">Points Flow</li>
+                </a>
+                <li class="pull-right">
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                                style="background: transparent">View All                            <span class="caret bottom-2"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation">
+                                    <a role="menuitem" class="ft-ccc" tabindex="-1"
+                                       href="/user.html?type=1&filter=0">View All</a>
+                                </li>
+                                                            <li role="presentation">
+                                    <a role="menuitem" class="ft-ccc" tabindex="-1"
+                                       href="/user.html?type=1&filter=1">Income Only</a>
+                                </li>
+                                                            <li role="presentation">
+                                    <a role="menuitem" class="ft-ccc" tabindex="-1"
+                                       href="/user.html?type=1&filter=2">Expenditure Only</a>
+                                </li>
+                                                    </ul>
+                    </div>
+            </ul>
+            <table class="table sale-item-table sale-user-table">
+                                    <!-- 账户流水 -->
+                    <tr>
+    <th>ID</th>
+    <th>Action</th>
+    <th>Capital Changes</th>
+    <th>Balance(¥)</th>
+    <th>Time</th>
+    <!--                    <th>--><!--</th>-->
+</tr>
+    <div id="yw0" class="list-view">
+<div class="items">
+<tr>
+    <td>1077521791</td>
+    <td>Income(supply)</td>
+    <td>
+        119.8    </td>
+    <td class="text-success">119.8</td>
+    <td>
+        2020/01/09 03:09:14 PM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071111312</td>
+    <td>Buy</td>
+    <td>
+        -66.12    </td>
+    <td class="text-success">0</td>
+    <td>
+        2019/12/22 10:10:48 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071111310</td>
+    <td>Recharge</td>
+    <td>
+        1.14    </td>
+    <td class="text-success">66.12</td>
+    <td>
+        2019/12/22 10:10:45 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071106765</td>
+    <td>订单取消解冻资金</td>
+    <td>
+        64.98    </td>
+    <td class="text-success">64.98</td>
+    <td>
+        2019/12/22 09:54:03 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071103848</td>
+    <td>Buy</td>
+    <td>
+        -121.1    </td>
+    <td class="text-success">0</td>
+    <td>
+        2019/12/22 09:40:46 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071103843</td>
+    <td>Recharge</td>
+    <td>
+        121.1    </td>
+    <td class="text-success">121.1</td>
+    <td>
+        2019/12/22 09:40:42 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071103559</td>
+    <td>Buy</td>
+    <td>
+        -64.98    </td>
+    <td class="text-success">0</td>
+    <td>
+        2019/12/22 09:39:43 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+<tr>
+    <td>1071103537</td>
+    <td>Recharge</td>
+    <td>
+        45.17    </td>
+    <td class="text-success">64.98</td>
+    <td>
+        2019/12/22 09:39:32 AM    </td>
+<!--        <td>-->
+<!--        --><!--    </td>-->
+</tr>
+</div><div class="keys" style="display:none" title="/user.html"><span>1077521791</span><span>1071111312</span><span>1071111310</span><span>1071106765</span><span>1071103848</span><span>1071103843</span><span>1071103559</span><span>1071103537</span></div>
+</div>                            </table>
+
+            <div class="sale-pagination ">
+                            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="tips" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Locked Amount                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p>When you post purchase, the purchase money will be locked. Please check the Purchase whether there is any purchase posted.</p>
+                    <p>If your money is locked without posting purchase, please contact customer service!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--领取周奖励 未到领取时间getweek1 -->
+<div class="modal fade" id="get-week-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 200px;width: 400px;height: 190px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    领取奖励
+                </h4>
+            </div>
+            <div class="modal-body" style="min-width: 350px;text-align: center;">
+                <h4 class="text-center ft-14 mt-20" >
+                    未到领取时间，请于下周二12:00~24:00领取
+                </h4>
+                <a href="" class="btn btn-green mt-20" style="width: 90px;border-radius: 5px;">确认</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--领取周奖励 已领取getweek2-->
+<div class="modal fade" id="get-week-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 200px;width: 400px;height: 190px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    领取奖励
+                </h4>
+            </div>
+            <div class="modal-body" style="min-width: 350px;text-align: center;">
+                <h4 class="text-center ft-14 mt-20" >
+                    您已经领取了上周的奖励，请勿重复领取
+                </h4>
+                <a href="" class="btn btn-green mt-20" style="width: 90px;border-radius: 5px;">确认</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--领取周奖励 领取成功getweek3-->
+<div class="modal fade" id="get-week-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 200px;width: 400px;height: 190px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    领取奖励
+                </h4>
+            </div>
+            <div class="modal-body" style="min-width: 350px;text-align: center;">
+                <h4 class="text-center ft-14 mt-20" >
+                    领取成功，奖励金额将发放到您的余额中
+                </h4>
+                <a href="" class="btn btn-green mt-20" style="width: 90px;border-radius: 5px;">确认</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--领取周奖励 领取失败getweek4-->
+<div class="modal fade" id="get-week-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 200px;width: 400px;height: 200px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    领取奖励
+                </h4>
+            </div>
+            <div class="modal-body" style="min-width: 350px;text-align: center;">
+                <h4 class="text-center ft-14">
+                    领取失败，网站鉴定您为<span style='color: #AE4344'>恶意刷单</span>，被取消资格
+                </h4>
+                <h4 class="text-center ft-14">
+                    请您遵守C5的规则，共同塑造良好的饰品交易市场环境
+                </h4>
+                <h4 class="text-center ft-14">
+                    如有疑问请联系客服
+                </h4>
+                <a href="" class="btn btn-green mt-10" style="width: 90px;border-radius: 5px;">确认</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--游戏规则-->
+<div class="modal fade" id="activity-rules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top: 200px;width: 480px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    游戏规则
+                </h4>
+            </div>
+            <div class="modal-body" style="min-width: 350px; padding: 10px">
+                <div style='padding:9px; padding-bottom: 1px; background-color: #282C3A; border-radius:5px;' class="ft-12">
+                    <p>1.参与对象为全体C5用户</p>
+                    <p>2.本次互动奖励以可领取的最高档奖励为最终奖励（如A用户销售额达到活动要求的第四档奖励，则奖励现金xxx）</p>
+                    <p>3.本活动针对于DOTA2、CSGO饰品出售，STEAM游戏销售额暂时不在此类</p>
+                    <p>4.活动期间，用户出售额达标所获得的奖励，将于周二统一在界面进行领取</p>
+                    <p>5.活动时间统一为北京时间起止，请用户知悉</p>
+                    <p>6.活动期间，使用小号恶意刷成交量，恶意倒卖的，C5将有权取消其活动奖励并予以处罚</p>
+                    <p>7.本次奖励金额不得用于提现</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="J_SellerLevelTpl">
+    <div class="ft-12">
+                    <p class="ft-base mb-10">
+                <span>升级条件</span>
+                <a class="ft-base pull-right" href="/help.html?pid=542383150">规则说明</a>
+            </p>
+                        <p class="ft-color mb-0">
+                <span>荣誉值：</span>
+
+                                                            <span>还差</span>
+                        <span class="ft-gold">1199</span>
+                        <span>荣誉值升级到下一级别</span>
+                                                </p>
+            </div>
+</script>
+<script>
+    $(function(){
+        var sSellerLevelHtml = template("J_SellerLevelTpl");
+
+        $(".j_SellerLevel").popover({
+            trigger: 'hover', 
+            placement: 'bottom',
+            html: true, 
+            container: '.j_SellerLevel',
+            content: sSellerLevelHtml
+        });
+
+        // $('.j_SellerLevel').popover('show');
+        
+        // C豆协议
+        $.star.ajax({
+            type: 'GET',
+            url: '/api/cdou/deductionCheck.json'
+        }).then(function(res){
+            var nCode = res.status,
+                sMsg = res.message
+            ;
+
+            if (nCode == 200) {
+                var oData = res.body;
+
+                if(oData.show_agreement == 1 && oData.has_cdou == 1 && $.cookie("showCbeanAgreement") != -1){
+                    if(oData.agreement_old == 0){
+                        // 新协议
+                        if(oData.agreement_new == 0){
+                            $("#J_CbeanAgreement").modal("show");
+                        }
+                    }else{
+                        if(oData.agreement_ex == 0){
+                            // 补充协议
+                            $("#J_CbeanExtAgreement").modal("show");
+                        }
+                    }
+                } 
+            }
+        });
+    });
+
+
+    var myChart = echarts.init(document.getElementById('main'));
+
+    var dataStyle = {
+        normal: {
+            label: {
+                show: true
+            },
+            labelLine: {
+                show: true
+            },
+            shadowBlur: 40,
+            shadowColor: 'rgba(25, 25, 25, 0.5)',
+        }
+    };
+
+    option = {
+        backgroundColor: '#222836',
+        tooltip: {
+            backgroundColor: 'transparent',
+            trigger: '',
+            formatter: '{c} ({d}%)',
+            position: ['110px', '190px']
+        },
+        legend: {
+            orient: 'left',
+            x: 'right',
+            y: 'bottom',
+            data: ['Income', 'Expenditure', 'Recharge', 'Withdraw'],
+            textStyle: {
+                color: '#868889'
+            }
+        },
+        series: [
+            {
+                name: '',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                itemStyle: dataStyle,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '18',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: '', name: 'Income', itemStyle: {normal: {color: '#009966'}}},
+                    {value: '', name: 'Expenditure', itemStyle: {normal: {color: '#4C789D'}}},
+                    {value: '', name: 'Recharge', itemStyle: {normal: {color: '#AB4344'}}},
+                    {value: '', name: 'Withdraw', itemStyle: {normal: {color: '#d1a452'}}}
+                ]
+            }
+        ],
+        animation: true,
+        animationDuration: 1000
+    };
+
+    var url = '/api/user/bill.json';
+
+    $.get(url, function (res) {
+
+        var bill = res.body;
+        var name = ['all_income', 'all_outcome', 'all_payment', 'all_transfer', 'income', 'outcome', 'payment', 'transfer'];
+
+        for (var i = 0; i < 8; i++) {
+            $('.stat' + i).html(bill[name[i]]);
+        }
+
+        for (var i = 0; i < 4; i++) {
+            option.series[0].data[i].value = bill[name[i]];
+        }
+
+        myChart.setOption(option);
+
+        $('.statistics').on('click', function () {
+
+            $('.statistics').removeClass('active');
+            $(this).addClass('active');
+
+            var option = myChart.getOption();
+            var index = $('.statistics').index(this);
+
+            if (index > 3) {
+                for (var i = 0; i < 4; i++) {
+                    k = i + 4;
+                    option.series[0].data[i].value = bill[name[k]];
+                }
+
+                $('.account-title').html("Month&#039;s Details");
+
+            }else{
+
+                for (var i = 0; i < 4; i++) {
+                    option.series[0].data[i].value = bill[name[i]];
+                }
+
+                $('.account-title').html("Total Details");
+            }
+
+            myChart.setOption(option);
+        });
+
+    });
+
+    $(document).on("click",'#new_login_modal', function(){
+        var $this = $(this);
+
+        var url = $(this).data("href");
+        var redirect =$this.data("redirect");
+        var appId = $this.data("appid");
+        $.ajax({
+            url: url,
+            data: {'redirect':redirect,'appId':appId},
+            type: 'POST',
+            success: function (res) {
+                var $remote = $('#remote-dailog-modal');
+                $remote.find('.modal-content').html(res);
+                $remote.modal('show');
+                $this.button('reset');
+            }
+        })
+    });
+</script>        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Exchange                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="clearfix">
+                        <div class="pull-left">Points：</div>
+                        <div  class="pull-left">120</div>
+                    </div>
+                    <div class="clearfix mt-10">
+                        <div class="pull-left">Amount：</div>
+                        <div class="pull-left">
+                            <div class="pull-left">
+                                <div class="btn-toolbar" role="toolbar">
+                                    <div class="btn-group count-btn-group">
+                                        <button type="button" class="btn btn-default mr-7 select-recharge" data-num="10">10</button>
+                                        <button type="button" class="btn btn-default mr-7 select-recharge" data-num="50">50</button>
+                                        <button type="button" class="btn btn-default mr-7 select-recharge" data-num="100">100</button>
+                                        <button type="button" class="btn btn-default mr-7 select-recharge" data-num="500">500</button>
+                                        <button type="button" class="btn btn-default mr-7 select-recharge" data-num="1000">1000</button>
+                                    </div>
+                                </div>
+                                <form id="recharge_gold_form" role="form" method="post" action="/api/cloudbuy/recharge.json">
+                                    <div class="input-group count-input-group  mt-10">
+                                        <b style="position: relative;right: 145px;z-index: 10;top: 5px">￥</b>
+                                        <input style="width:150px; padding:5px;padding-left: 20px;font-size: 12px" id="recharge-num" name="num" placeholder="Input the amount" class="form-control" value="10">
+                                        <b style="font-weight:normal;margin-left: 10px; color:#337ab7;">*input the amount you want to exchange</b>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="pull-left">Available：<span class="ft-orange"><span class="pay-money">10000</span> points</span> &nbsp;(￥1=1000 points)</span>
+                    <button type="button" class="btn btn-green" id="gold-rechange-pay-submit" data-message="Confirm payment?" data-user-money="119.8">Exchange                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+//积分充值
+$(document).on('click', '.select-recharge', function () {
+
+    var $this = $(this);
+
+    var num = $this.data('num');
+
+    var num_dom = $('#recharge-num');
+
+    var pay_money = $('.pay-money');
+
+    num_dom.val(num);
+
+    num_dom.trigger('change');
+
+    pay_money.html(num * 1000);
+});
+
+$(document).on('blur', '#recharge-num', function () {
+
+    var num_dom = $('#recharge-num');
+
+    var pay_money = $('.pay-money');
+
+    var num = num_dom.val();
+
+    var num = Math.floor(num);
+
+    if (num < 1) {
+
+        var num = 1;
+    }
+
+    num_dom.val(num);
+
+    pay_money.html(num * 1000);
+
+})
+
+//积分充值支付弹框
+$(document).on('click', '#gold-rechange-pay-submit', function (e) {
+
+    var $this = $(this);
+
+    var uid = $.star.getLoginUserId();
+
+    if (uid == 0) {
+
+        $('#ajax-login-dailog').trigger('click');
+
+        return false;
+    }
+
+    var total_money = $('#recharge-num').val();
+
+    var comfirm_message = $this.data('message') + '<br><span class="ft-gold">支付总金额:￥' + total_money + '</span>';
+
+    jQuery.showMessage({
+        'content': comfirm_message,
+        'buttons': [
+            {
+                'text': c5_modal_cancel,
+                'class': 'btn btn-blue mr-5',
+                'dismiss': true
+            },
+            {
+                'text': c5_modal_sure_pay,
+                'class': 'btn btn-yellow',
+                'callback': function () {
+                    var $form = $('#recharge_gold_form');
+
+                    var $this = $(this);
+
+                    $this.button('loading');
+
+                    $.ajax({
+                        method: 'POST',
+                        url: $form.attr('action'),
+                        data: $form.serialize(),
+                        dataType: 'json',
+                        success: function (json) {
+
+                            $this.button('reset');
+
+                            var msg = json.message;
+
+                            if (json.status === 200) {
+
+                                jQuery.showMessage({content: msg, refresh: true});
+                            } else {
+
+                                jQuery.showErrorMessage(msg);
+                            }
+                        }, error: function () {
+
+                            $this.button('reset');
+
+                            jQuery.showErrorMessage(c5_unknoe_error);
+                        }
+                    });
+                }
+            }
+        ]
+    });
+});
+</script>
+    </div>
+
+</div>
+<div id="footer">
+    <div id="foot-banner">
+        <div class="banner-logined hide banner-sell">
+            <img src="/images/queen.png" alt="qop">
+            <div class="amount-num text-left ml-10">
+                <p class="mt-5 mb-5">C5 invites you to join official QQ group, and let us hear your voice</p>
+                <div class="clearfix" style="width: 435px;">
+                    <p class="ft-gold pull-left" style="width: 105px"><span
+                                class="icon-csgo mr-5"></span>50510657</p>
+                    <p class="ft-gold pull-left" style="width: 105px"><span
+                                class="icon-dota2 mr-5"></span>4215432</p>
+                    <p class="ft-gold pull-left" style="width: 105px"><span
+                                class="icon-steam mr-5"></span>437577650</p>
+                    <p class="ft-gold pull-left" style="width: 105px"><span
+                                class="icon-pubg mr-5"></span>561500633</p>
+                    <p class="ft-gold pull-left" style="width: 105px"><span
+                                class="icon-kotk mr-5"></span>548924081</p>
+                </div>
+            </div>
+
+            <button class="close" id="close-banner" style="position:absolute; margin-left: 7px;">×</button>
+        </div>
+    </div>
+            <div class="footer-hd">
+            <ul class="footer-links">
+                <li>
+                    <div class="title title1">Newbie Guide</div>
+                    <div class="links">
+                        <a href="/help.html?tag=%E9%A5%B0%E5%93%81%E5%AD%98%E5%8F%96">Store and Pick</a>
+                        <a href="/help.html?tag=%E5%BA%97%E9%93%BA%E6%95%99%E7%A8%8B">Sell and Purchase</a>
+                        <a href="/help.html?tag=%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">FAQ</a>
+                        <a class="service" href="javascript:void(0)">Support</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="title title3">Payment</div>
+                    <div class="links">
+                        <span id="alipay"></span>
+                        <span id="wechat"></span>
+                        <span id="union"></span>
+                        <!-- <a id="visa" href="#"></a>
+                        <a id="paypal" href="#"></a> -->
+                        <!-- <a href="https://www.megastock.com" target="_blank"><img src="/images/acc_blue_on_transp_en.png" alt="www.megastock.com" border="0"/></a>
+                        <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=712819440809" target="_blank"><img src="/images/v_blue_on_transp_en.png" alt="Here you can find information as to the passport for our WM-identifier 712819440809" border="0"><br><span style="font-size: 0,7em;">Check passport</span></a> -->
+                    </div>
+                </li>
+                <li>
+                    <div class="title title4">Family Safety</div>
+                    <div class="links">
+                        <a href="https://www.c5game.com/activity/job/custody">Application Process</a>
+                        <a href="https://www.c5game.com/activity/job/custody">Application Guide</a>
+                    </div>
+                </li>
+                <li class="last">
+                    <div class="title title5">About C5</div>
+                    <div class="links">
+                        <a href="/help/default/announce.html">Notice</a>
+                        <a href="/help/default/about.html">About Us</a>
+                        <a target="_blank"
+                           href="http://steamcommunity.com/groups/C5gameVIP">Steam</a>
+                        <a>Business：bd@c5game.com</a>
+                        <a>建议反馈：feedback@c5game.com</a>
+                        <a>举报投诉：ceo@c5game.com</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="friend-links mt-20">
+                <p>Interlink：</p>
+                <p class="friend-links-content">
+                                            <a href="https://www.zbt.com/"
+                           target="_blank">ZBT数字资产社区</a>
+                                            <a href="https://www.zbt.com/roll.html"
+                           target="_blank">饰品免费领取社区</a>
+                                    </p>
+            </div>
+        </div>
+        <div class="footer-bd">
+            <div class="footer-bd-content clearfix">
+                <div class="safe-union pull-left">
+                <a target="_blank" href="https://v.yunaq.com/certificate?domain=www.c5game.com&from=label&code=90030" >
+                    <img src="/images/safe-union2.png" alt="安全联盟" class="img-safe-union">
+                </a>
+                </div>
+                <div class="copyright pull-left">
+                    <p class="company">   </p>
+                    <p>Copyright©2016 c5game.com All rights reserved. 浙ICP备16013980号-2 经营性许可证:
+                    <a class="copyright" href="http://www.beian.miit.gov.cn" target="_blank">浙B2-20161004</a>.
+                        浙网文［2017］6090-362号</p>
+                    <p>
+                        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602009731">
+                        <img src="/images/备案图标.png" alt="" style="float: left;">
+                            <span style="color: #4e4f53;line-height: 22px;margin-left: 4px;">浙公网安备 33010602009731号</span>
+                        </a>
+                    </p>
+                    <a style="color: #4e4f53" href="/help/default/about.html">关于我们</a>
+                    <a style="color: #4e4f53" href="/help/default/about.html">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="side-guide">
+    <!--帮助按钮-->
+    <div id="help-btn" class="">
+        <a class="text-center app-donwload" href='javascript:void(0)'
+           style="margin-bottom:5px; cursor: pointer; background: #6d7ab3; color: #FFF" ,
+           onmouseover="document.getElementById('touch-app').src='/images/default/app-active.png'"
+           onmouseout="document.getElementById('touch-app').src='/images/default/app-active.png'">
+            <!--app-->
+            <p class="text-center">
+                <img id='touch-app' src="/images/default/app-active.png" alt="" ,>
+            </p>
+            APP            <div class="hoverBox-app text-center" style='bottom: -11px'>
+                <div style="padding:10px;background-color: #2C3040;">
+                    <div>
+                        <p>IOS</p>
+                        <div style="border:1px solid #6C79B1;padding: 2px;">
+                            <img width="100%" src="/images/app/ios-app.png?v=20191021"
+                                 alt="ios-qr">
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 10px;border-bottom: 1px solid #393E53">
+                        <p style='padding-bottom: 0;margin-top: 20px'>Android</p>
+                        <div style="border:1px solid #6C79B1;padding: 2px;">
+                            <img width="100%" src="/images/app/android-app-v2.png"
+                                 alt="android-qr">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a class="text-center" href="/help.html">
+            <p class="text-center mt-5 mb-5">
+                <span class="icon iconfont ft-18 right-2">&#xe735;</span>
+            </p>
+            Help        </a>
+        <a class="text-center service zhiCustomBtn" style="margin-top:5px;cursor: pointer">
+            <!--联系客服数字-->
+
+            <span class="circle_red" id="unreadNum" style="display:none"></span>
+            <p class="text-center mt-5 mb-5">
+                <span class="icon iconfont ft-18 right-2">&#xe654;</span>
+            </p>
+            Support        </a>
+        <a class="text-center partners hide" href="http://www.uhaozu.com/notice/list/67" target="_blank"
+           style="margin-top:5px">
+            <!--联系客服数字-->
+            <p class="text-center mt-5 mb-5">
+                <span class="icon iconfont ft-20 right-2" style="color:#f66928">&#xe699;</span>
+            </p>
+            Partnership        </a>
+
+        <div class="mt-5 official-media" style="cursor:pointer;">
+            Media            <div class="hoverBox text-center">
+                <div style="padding:10px;background-color: #2C3040;">
+                    <div style="padding-bottom: 10px;border-bottom: 1px solid #393E53">
+                        <img class="mr-5" src="/images/default/weibo-icon.png"
+                             alt="微博icon">Weibo                        <div style="border:1px solid #6C79B1;padding: 2px;">
+                            <img width="100%" src="/images/default/weibo-qr.jpg"
+                                 alt="微博qr">
+                        </div>
+                    </div>
+                    <div class="pt-10">
+                        <img class="mr-5" src="/images/default/wechart-icon.png"
+                             alt="微信icon">Wechat                        <div style="border:1px solid #6C79B1;padding: 2px;">
+                            <img width="100%" src="/images/default/wechart-qr.jpg?v=1"
+                                 alt="微信qr">
+                        </div>
+                    </div>
+                    <div class="text-left">
+                        <p class="mb-0">
+                            <span class="icon iconfont ft-16">&#xe677;</span>Facebook: <a class="ft-gold"
+                                                                                          target="_blank"
+                                                                                          href="https://www.facebook.com/C5game/?ref=bookmarks">C5GAME</a>
+                        </p>
+                        <p class="mb-0">
+                            <span class="icon iconfont ft-16">&#xe648;</span>Twitter: <a class="ft-gold" target="_blank"
+                                                                                         href="https://twitter.com/C5GAME_">C5GAME</a>
+                        </p>
+                        <p class="mb-0">
+                            <span class="icon iconfont ft-16">&#xe658;</span>Instagram: C5GAME
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 official-media pt-0" style="cursor:pointer; background-image: none">
+            <p class="text-center mt-5 mb-5">
+                <span class="icon iconfont ft-20 right-2">&#xe6ea;</span>
+            </p>
+            QQ            <div class="hoverBox text-center">
+                <div style="background-color: #2C3040;padding: 5px 0;width: 175px;margin-left: -10px;">
+                    <div class="mt-10"><a class="text-left pl-20" target="_blank"
+                                          href="//shang.qq.com/wpa/qunwpa?idkey=6f9a19b62c1b7205ebb8f10401e5da517607fd71b3f0777c3d47e35005095ba8"
+                                          style="display: inline-block;padding: 0 5px;width:100%;" title="4215432"><span
+                                    class="icon-dota2 mr-5 "></span>DOTA2交流群</a></div>
+                    <div class="mt-10"><a class="text-left pl-20" target="_blank"
+                                          href="//shang.qq.com/wpa/qunwpa?idkey=aa2f805bdbbec37425be9cb0d93ef60699dfe2b421efe7f8c0be0fdf6539ba34"
+                                          style="display: inline-block;padding: 0 5px;width:100%;" title="926100374"><span
+                                    class="icon-csgo mr-5 "></span>CSGO交流群</a></div>
+                    <div class="mt-10"><a class="text-left pl-20" target="_blank"
+                                          href="//shang.qq.com/wpa/qunwpa?idkey=bc3ef2563fe1372781c9ab966e0a94ed9b8dffeecfd2202a388a2857e7c7714d"
+                                          style="display: inline-block;padding: 0 5px;width:100%;" title="548924081"><span
+                                    class="icon-kotk mr-5 "></span>H1Z1交流群</a></div>
+                    <div class="mt-10 mb-10"><a class="text-left pl-20" target="_blank"
+                                                href="//shang.qq.com/wpa/qunwpa?idkey=a7f8aaa91064dce1be4b8776edab8865bf43bcc1861e655bfeebd6e640a9d23d "
+                                                style="display: inline-block;padding: 0 5px;width:100%;" title="561500633"><span
+                                    class="icon-pubg mr-5 t"></span>PUBG交流群</a></div>
+                    <div class="mt-10 mb-10"><a class="text-left pl-20" target="_blank"
+                                                href="//shang.qq.com/wpa/qunwpa?idkey=35fe318aa7fdb746fcbf29888ebf06bcc676c40f5ab957d25a99f9336dc9af05"
+                                                style="display: inline-block;padding: 0 5px;width:100%;" title="681080112"><span
+                                    class="icon-Artifact mr-5 t"></span>Artifact交流群</a></div>
+                    <div class="mt-10 mb-10"><a class="text-left pl-20" target="_blank"
+                                href="//shang.qq.com/wpa/qunwpa?idkey=22711fca8a98c3df41a86e67a566defbdf31b5112a8da2d6e62d31ff5878ca0b"
+                                style="display: inline-block;padding: 0 10px;width:100%;" title="942840698"><span
+                    class="icon-753 mr-5 t"></span>C5GAME游戏交流群</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 official-media pt-0" style="cursor:pointer; background-image: none">
+            <div id="verify-query">
+                <p class="text-center mt-5 mb-5">
+                    <span class="icon iconfont ft-20 right-2">&#xe6af;</span>
+                </p>
+                官方查询                <span style="font-size:30px;line-height:1;position:absolute;left:0;top:0;color:#bc393b"
+                      class="icon iconfont ft-20">&#xe6b2;</span>
+            </div>
+            <div class="hoverBox text-left" style="width:460px;border-radius:2px;right:100%;left: auto"></div>
+            <script type="text/html" id="verify-query-tmpl">
+    <div class="verify-query">
+        <div class="verify-query-hd">
+            <a class="pull-right" href="https://www.c5game.com/wiki/541570651.html" target="_blank">
+                查看防骗指南            </a>
+            <span class="icon iconfont ft-20 right-2 media-middle">&#xe6af;</span>
+            <span class="media-middle">官方验证查询</span>
+        </div>
+        <div class="verify-query-bd">
+            <div class="mb-20">
+                近期有不法分子假冒官方工作人员诈骗饰品，C5GAME不会以任何理由向您索取账号密码，请谨防诈骗。            </div>
+            <div class="verify-query-container">
+                <ul class="verify-query-nav nav nav-justified" role="tablist">
+                    <li class="active">
+                        <a href="#verify-query-qq" aria-controls="verify-query-qq" role="tab" data-toggle="tab">
+                            QQ验证                        </a>
+                    </li>
+                    <li>
+                        <a href="#verify-query-bot" aria-controls="verify-query-bot" role="tab" data-toggle="tab">
+                            机器人验证                        </a>
+                    </li>
+                    <li>
+                        <a href="#verify-query-site" aria-controls="verify-query-site" role="tab" data-toggle="tab">
+                            网址验证                        </a>
+                    </li>
+                </ul>
+                <div id="verify-query-container">
+                    {{include 'verify-query-form-tmpl' data}}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="verify-query-form-tmpl">
+    <form>
+        <div class="row mb-10">
+            <div class="col-xs-12">
+                <div style="position:absolute;right:0;top:0;padding-right:10px;padding-top:3px">
+                    <img class="verify" style="width: 100px"
+                         data-origin="/api/offical/captcha.json"
+                         src="/api/offical/captcha.json?v={{ time }}"/>
+                </div>
+                <input autocomplete="off" class="form-control" name="verify"
+                       placeholder="请输入图形验证码"/>
+            </div>
+        </div>
+        <div class="row mb-10">
+            <div class="col-xs-8" style="padding-right: 0">
+                {{if type == 1}}
+                <input class="form-control" autocomplete="off" name="value"
+                       placeholder="请输入QQ联系人/群号码查询"/>
+                {{/if}}
+                {{if type == 2}}
+                <input class="form-control" autocomplete="off" name="value"
+                       placeholder="请输入steam id"/>
+                {{/if}}
+                {{if type == 3}}
+                <input class="form-control" autocomplete="off" name="value"
+                       placeholder="请输入网址"/>
+                {{/if}}
+            </div>
+            <div class="col-xs-4">
+                <a class="btn btn-block">
+                    立即验证                </a>
+            </div>
+        </div>
+        {{ if type == 2 }}
+        <a class="btn-link" target="_blank" href="https://www.c5game.com/help.html?pid=542383078">
+            查看《如何查看机器人steam id》        </a>
+        {{ /if }}
+        <div id="verify-query-message" style="display: none">
+            <div class="media-left media-middle" style="padding-right: 20px">
+                <span class="iconfont ft-red" style="font-size: 40px">
+                    &#xe6b0;
+                </span>
+            </div>
+            <div class="media-body media-middle">
+                <span id="verify-query-res"></span>
+            </div>
+        </div>
+    </form>
+</script>
+<script>
+    function isVerifyQuery(type, value, cb) {
+        if (!value) {
+            cb && cb();
+            verifyQueryMessage(0, "请输入正确的目标")
+            return false;
+        }
+        return $.ajax({
+            url: "/api/offical/validate.json",
+            data: {
+                type: type,
+                value: value,
+                verify: $('#verify-query-container input[name="verify"]').val()
+            },
+            dataType: 'json',
+            type: 'GET',
+            success: function (res) {
+                cb && cb();
+                if (res.status == 200) {
+                    $('#verify-query-container .verify').trigger('click');
+                    var $message = $('<div>');
+                    if (res.body.isOffical == 1) {
+                        $message.html("您查询的<span class=\"ft-green\"></span>为C5GAME官方<span></span>！如有疑问,<a class=\"btn-link service\">请联系客服</a>")
+                        $message.find('span').eq(0).text(value);
+                        $message.find('span').eq(1).text(verifyQueryMessage($('.verify-query-nav > li.active').index() + 1));
+                    } else {
+                        $message.html("您查询的<span class=\"ft-red\"></span>为未知生物，请拉黑TA，说的任何话都不要相信，谨防诈骗！如有疑问,<a class=\"btn-link service\">请联系客服</a>")
+                        $message.find('span').eq(0).text(value);
+                    }
+                    verifyQueryMessage(res.body.isOffical, $message.html());
+                } else {
+                    verifyQueryMessage(0, res.message);
+                }
+            }
+        })
+    }
+    function verifyQueryMessage(type, message) {
+        $('#verify-query-message').show();
+        var $ico = $('#verify-query-message .iconfont');
+        if (type == 1) {
+            $ico.css('color', '#5ba919').html('&#xe6b0;')
+        } else {
+            $ico.css('color', '#bc393b').html('&#xe6b3;')
+        }
+        $('#verify-query-res').html(message);
+    }
+
+    function verifyQueryTypeName(type) {
+        switch (type) {
+            case 1:
+                return 'QQ';
+            case 2:
+                return "机器人";
+            case 3:
+                return "网址"
+            default :
+                return ''
+        }
+    }
+
+    $(document).on('click', '.verify-query-nav > li > a', function () {
+        var formHtml = template('verify-query-form-tmpl', {
+            type: $(this).parent().index() + 1,
+            time: new Date().getTime()
+        });
+        $('#verify-query-container').html(formHtml);
+    }).on('click', '#verify-query-container .btn-block', function () {
+        var $btn = $(this).button('loading');
+        isVerifyQuery($('.verify-query-nav > li.active').index() + 1, $('#verify-query-container input[name="value"]').val(), function () {
+            $btn.button('reset');
+        });
+    }).on('click', '#verify-query-container .service', function () {
+        openService();
+    }).on('click', '#verify-query-container .verify', function () {
+        var src = $(this).data('origin');
+        $(this).attr('src', src + '?v=' + new Date().getTime())
+    });
+</script>        </div>
+    </div>
+    <!--置顶-->
+    <div id="affix-nav">
+        <ul class="addix-nav">
+            <!--         <li class="n-top"  style="display:list-item;">
+                                <a href="###">
+                                    <i><img src="/images/user/done.png"/></i>
+                                    <span class="navi">10</span>
+                                </a>
+                            </li>-->
+            <li class="n-top" id="scroll-up" title="Back to the top" style="display:list-item;">
+                <a href="javascript:void(0)">
+                    <i><img src="/images/n-top.png" alt="arrow-up"/></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="modal fade remote-dailog-modal" id="remote-dailog-modal" tabindex="-1" role="dialog"
+     aria-labelledby="remote-dailog-modal">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="text-center" style="padding: 50px 100px">Loading...</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="winnerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="winner-content">
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 矿石模态框（Modal） -->
+<div class="modal fade" id="oreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content oreModal">
+                <div class="text-center">
+                    <p class="ft-18 ft-red" style="font-weight: 700;padding-right: 40px;" id="case-name"></p>
+                    <img id="ore-image" src="https://static.c5game.com/images/playground/ore1.png?v=20200110135322"
+                         width="250" alt="">
+                </div>
+                <a href="javascript:void(0)" data-dismiss="modal" class="text-center ft-16 ft-white"
+                   style="display: inline-block;width: 110px;height: 30px;line-height: 30px;position: absolute;left: 150px;top: 328px;">OK</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--异地登录app验证-->
+<div class="modal fade" id="app-verify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        异地登录检测，APP验证
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info" style="width: 470px;">
+                        系统检测到您在一台新的设备或者异地登录，为保障您的账户安全，请选择一下一种方式进行身份核实。
+                    </div>
+                    <div class="text-center" style="width: 470px;">
+                        <img class="mb-20" src="/images/verify.png" alt="">
+                        <br>
+                        <a class='btn btn-green' href="">APP验证</a>
+                        <p class="text-center mt-20 mb-20" style="padding: 0 100px">
+                            如果你已经安装并登录了APP，点击开始验证即可，在APP中你会收到验证弹窗。
+                        </p>
+                    </div>
+                    <a class="pull-right" href="">手机验证码验证>></a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--购买第三方风险提示-->
+<div class="modal fade" id="buy-riskWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Third-party Risk Warning                    </h4>
+                </div>
+                <div style="width: 580px;padding: 20px;">
+                    <div style="background: #1B1F2A;padding: 20px;border-radius: 4px;">
+                        <p>您即将通过星巢网络购买饰品，因星巢网络系基于Valve Corporation系统，如遇账号封禁、服务器被攻击等非星巢网络能够控制的事件，可能出现无法取出、交易等风险，就此星巢网络将不承担任何责任。如您不同意承担前述风险，请您点击“取消”。如您自愿承担前述风险，并同意星巢网络不就此承担任何责任，您可以点击“我同意”并继续交易</p>
+                        <p class="ft-gold mb-0">
+                            C5GAME strongly recommends taking back the items you buy immediately, in order to reduce the risk.                        </p>
+                    </div>
+                    <div class="text-center mt-20 mb-10">
+                        <a class="btn btn-green riskAgree mr-20"
+                           href="javascript:void(0)">I agree</a>
+                        <a class="btn btn-blue modal-off" href="javascript:void(0)"
+                           data-dismiss="modal">Cancel</a>
+                    </div>
+                    <p class="ft-gray text-center">
+                        When you agree this statement, system will not remind it any more                    </p>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<span class="hide" id="riskWarning-type"></span>
+<!-- 购买需知 -->
+<script type='text/html' id='buyKnow-tpl'>
+    <div style="width: 525px" class='buyKnow-body'>
+        <div class='know-content'>
+            <h5>您购买的人工发货饰品可以选择其中一种收货方式：</h5>
+            <p><span class='rgb228'>1.Steam账号收货：</span>卖家将会直接发送交易报价到您的Steam账号，您需要前往Steam进行确认该笔交易！</p>
+            <p><span class='rgb228'>2.C5代收：</span>卖家发货后，由C5帮您收货，您可以在C5背包中取回自己的饰品！</p>
+        </div>
+        <div class='know-footer'>
+        <a class="btn btn-blue haveKnow" id="buy-know-confirm"
+        data-id="{{id}}"
+        data-href="/user/sell/selfQuick.html?appid=570">确定</a>
+        <label class="pull-left" for="buy-know-notice">
+            <input type="checkbox" class="top-1 mr-5" id="buy-know-notice">
+            <span>不再提醒</span>
+        </label>
+        </div>
+    </div>
+</script>
+
+<!-- 账号检测结果 modal content -->
+<script type='text/html' id='check-account'>
+    <ul class='ul-status'>
+        {{each res}}
+            <li class='li-status' style='overflow:hidden;line-height:30px'>
+                <div class='li-left pull-left'>{{$value.text}}</div>
+                <div class='li-right pull-right'>
+                    {{if $value.status==0}}
+                        <a class='ft-gold' href="{{getHref($value)}}"  target='_blank' style="cursor:{{$value.status==0?'pointer':'auto'}}">{{tipText($value)}}</a>
+                    {{else}}
+                        <span>{{tipText($value)}}</span>
+                    {{/if}}
+                    <!-- <a class='li-tips mr-10' href="{{getHref($value)}}"  target='_blank' style="cursor:{{$value.status==0?'pointer':'auto'}}">{{tipText($value)}}</a> -->
+                    {{if $value.status==1}}
+                        <span class='iconfont' style='color:#5ba919;font-size:16px;'>&#xe69e;</span>
+                    {{else if $value.status==0}}
+                        <span class='iconfont' style='color:#ab4344;font-size:16px;'>&#xe6bd;</span>
+                    {{else if $value.status==-1}}
+                        <span class='iconfont' style='color:#b3b3b3;font-size:14px;padding-right:1px;'>&#xe60d;</span>
+                    {{/if}}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    <div class='res-text clearfix' style='line-height:30px'>
+        <span class='res-tips pull-left' style="color:{{is==1?'#5ba919':'#ab4344'}}">{{is==1?'恭喜顺利通过了检测，您的Steam账号状态均已正常':'您的Steam账号存在限制，请完成设置后继续检测'}}</span>
+        {{if is==1}}
+        <span class='iconfont pull-right' style='color:#5ba919;font-size:16px'>&#xe69e;</span>
+        {{else}}
+        <span class='iconfont pull-right' style='color:#ab4344;font-size:16px'>&#xe6bd;</span>
+        {{/if}}
+    </div>
+</script>
+<!-- 账号检测弹窗 -->
+<div class="modal fade" id="check-account-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">账号检测                    </h4>
+                </div>
+                <div class="modal-body modal-body-confirm check-account-content" style='text-align:center'>
+                    <img width='30' height='30' src='/images/ajax-loader.gif'/>
+                    <p class='check-text mt-30'></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--存入第三方风险提示-->
+<div class="modal fade" id="deposit-riskWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title">
+                        Third-party Risk Warning                    </h4>
+                </div>
+                <div style="width: 580px;padding: 20px;">
+                    <div style="background: #1B1F2A;padding: 20px;border-radius: 4px;">
+                        <p>您即将通过星巢网络存入饰品，因星巢网络系基于Valve Corporation系统，如遇账号封禁、服务器被攻击等非星巢网络能够控制的事件，可能出现无法取出、交易等风险，就此星巢网络将不承担任何责任。如您不同意承担前述风险，请您点击“取消”。如您自愿承担前述风险，并同意星巢网络不就此承担任何责任，您可以点击“我同意”并继续交易</p>
+                        <p class="ft-gold mb-0">
+                            C5GAME strongly recommends reducing the time of your items staying at our platform, if idle, take back your items, in order to reduce the risk.                        </p>
+                    </div>
+                    <div class="text-center mt-20 mb-10">
+                        <a class="btn btn-green riskAgree mr-20"
+                           href="javascript:void(0)">I agree</a>
+                        <a class="btn btn-blue modal-off" href="javascript:void(0)"
+                           data-dismiss="modal">Cancel</a>
+                    </div>
+                    <p class="ft-gray text-center">
+                        When you agree this statement, system will not remind it any more                    </p>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--grab中奖弹窗-->
+<div class="modal fade" id="grabLuckyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header" style="">
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="ft-14 mt-15" style="color:#ffcead">恭喜您！在抢卡活动中运气爆棚 成功获得</div>
+                        <div id="grabLucky-name" class="ft-16 mt-5 mb-10" style="color:#ffe2ce"></div>
+                        <div class="grabLucky-item">
+                            <i data-dismiss="modal" class="grabLucky-close">
+                                <img src="/images/activity/grab/luck_modal_close.png" alt="">
+                            </i>
+                            <span class="csgo-img-bg" style="display: block">
+                                <img src="" width="170px"/>
+                            </span>
+                        </div>
+                        <div class="grabLuckyModal-coin" style="">
+                             可兑换:<span class="grabLuckyModal-coinnum"></span>
+                            <span class="iconfont ft-14">
+                                &#xe6e1
+                            </span>
+                        </div>
+                        <div class="">
+                            <a href="/user/inventory/sub.html" class="btn btn-grabLucky ft-18">领取饰品</a>
+                        </div>
+                        <div class="ft-12 mt-10" style="color:#ffb483;opacity: .5;">
+                            兑换饰品有效期为<span id="grabLucky-date"></span>，逾期将无法兑换
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--支付密码错误-->
+<div class="modal fade" id="paypwd-error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        系统提示
+                    </h4>
+                </div>
+                <div style="min-width: 460px;padding: 30px 70px;">
+                    <p class="ft-red">交易密码错误</p>
+                    <p>若连续错误超过 <span class="ft-gold">3</span> 次，您将在1小时内无法再输入支付密码，</p>
+                    <p>若您忘记您的支付密码，请立即前去修改</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="/user/setting" target="_blank" class="btn btn-blue">立即修改</a>
+                    <a href="javascript:void(0)" class="btn btn-green reEnter" data-dismiss="modal" aria-hidden="true">重新输入</a>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--设置支付密码-->
+<div class="modal fade" id="set-pay-pwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">设置支付密码</h4>
+                </div>
+                <div class="pd-20" style="min-width: 500px;">
+                    <p class="text-center ft-blue">为了您的账户安全，您需要设置支付密码后才可购买饰品</p>
+                    <form>
+                        <input type="text" class="input-auto-off">
+                        <input type="password" class="input-auto-off">
+                        <div class="clearfix " style="line-height: 35px;">
+                            <div class="pull-left" style="width: 200px;text-align: right">
+                                设置支付密码：
+                            </div>
+                            <div class="pull-left">
+                                <input type="password" maxlength="6"
+                                       placeholder="密码为6位纯数字" id="pay-pwd"
+                                       style="width: 150px;overflow: hidden;height: 35px;line-height: 35px;background: #383F4F;border: 1px solid #696f87;">
+                            </div>
+                        </div>
+                        <div class="clearfix mt-10" style="line-height: 30px;">
+                            <div class="pull-left" style="width: 200px;text-align: right">
+                                确认密码：
+                            </div>
+                            <div class="pull-left">
+                                <input type="password" maxlength="6"
+                                       placeholder="请重新输入支付密码" id="pay-repwd"
+                                       style="width: 150px;overflow: hidden;height: 35px;line-height: 35px;background: #383F4F;border: 1px solid #696f87;">
+                            </div>
+                        </div>
+                        <div class="mt-30 text-center">
+                            <a href="javascript:void(0)"
+                               data-url="/api/user/setpaypwd.json"
+                               class="btn btn-green set-pay-pwd-btn">确认</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--购买挂单模式成功引导-->
+<div class="modal fade" id="self-guider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        System Prompt</h4>
+                </div>
+                <div class="modal-body text-center" style="min-width: 400px;">
+                    <div style="padding: 20px 0">
+                        <p>购买成功，已通知卖家进行发货！</p>
+                        <p>可在账户中心->购买记录中查看发货进度！</p>
+                        <p>15分钟后卖家未发货，您可主动取消该笔订单</p>
+                    </div>
+                    <div class="text-right">
+                        <a href="/user/order/buyerHistory" target="_blank"
+                           class="btn btn-green reload-window">Exchange</a>
+                        <a href="JavaScript:void(0)" data-dismiss="modal"
+                           class="btn btn-blue reload-window">OK</a>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+
+<!--C豆兑换使用协议-->
+<div class="modal fade" id="compensate-cdou" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        C豆兑换使用协议                    </h4>
+                </div>
+                <div style="width: 580px;padding: 20px;">
+                    <div style="background: #1B1F2A;padding: 20px;border-radius: 4px;">
+                        <p>亲爱的用户：</p>
+                        <p>您即将在此兑换C豆。C豆是为了补偿 Valve Corporation公司单方封禁本站游戏账号，而导致您的虚拟装备受损而设。在兑换C豆以前，请认真阅读以下条款：</p>
+                        <p>1. 我们会对您的损失进行公允估价，并且按照您的损失大小，补偿您对应的C豆。</p>
+                        <p>2. 如果您对估计存在异议，可以按照流程进行申诉。本站会按照市场情况进行处理。</p>
+                        <p>3. 您获得的C豆可以用于购买C豆市场中的饰品和其他网站服务。</p>
+                        <p>4. 您充分尊重C豆的价值，并同意C5GAME平台的补偿方案，并不就因为Valve封禁而导致您权益受损一事，与C5GAME 平台产生纠纷。</p>
+                        <p>5. C豆市场由C5GAME运营，请遵守市场使用规则。</p>
+                        <p class="ft-gold mb-0">以上为处理办法，如果您同意本办法请点击"我同意"并继续使用，如果您不同意本协议，请点击“取消”。</p>
+                    </div>
+                    <div class="text-center mt-20 mb-10">
+                        <a class="btn btn-green cdouAgree mr-20" href="javascript:void(0)"
+                           data-module="c_index">I agree</a>
+                        <a class="btn btn-blue"
+                           href="javascript:window.history.go(-1);">Cancel</a>
+                    </div>
+                    <p class="ft-gray text-center">
+                        When you agree this statement, system will not remind it any more                    </p>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--C豆兑换使用协议-新-->
+<div id="J_CbeanAgreement" class="gx-modal-agreement modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+        <div class="modal-middle">
+        	<div class="modal-content">
+        		<div class="modal-header">
+        			<h4 class="modal-title">
+                        C豆兑换使用协议                    </h4>
+        		</div>
+
+        		<div class="modal-body">
+        			<div class="text-left ft-14 ft-base pr-20" style="height: 240px;overflow-y: auto;">
+        				<p class="mb-30">您即将在此兑换C豆，C豆是为了补偿valve corporation单方面封禁星巢网络给您使用的游戏账号，导致您的游戏饰品受损而设的积分。在兑换C豆前，请认真阅读以下条款：</p>
+
+<ul class="mb-30">
+	<li>1、我们会对您的损失进行公允估价，并且按照您的损失大小，补偿您相应的C豆。</li>
+	<li>2、您同意C豆为星巢网络的一项用户积分系统，仅是星巢网络为用户提供相关服务的工具。</li>
+	<li>3、您同意您对获得的C豆仅享有使用权，星巢网络充分尊重您在星巢网络“C豆使用规则”下对C豆的使用方式。</li>
+	<li>4、您同意星巢网络对C豆的运营方案，星巢网络将依据实际情况调整C豆的运营方式、使用时间或使用功能等。</li>
+	<li>5、若您对C豆使用有更好的建议，您可联系客服部门（feedback@c5game.com），星巢网络将汇总您的建议并依据实际情况决定是否采纳，以期满足更多用户对C豆的期望。</li>
+	<li>6、本协议体现了您与星巢网络就C豆所达成的所有内容，并取代了在此之前双方有关本协议事宜的任何口头、书面的要约或协议。</li>
+	<li>7、以上条款星巢网络享有最终解释权。</li>
+</ul>
+
+<p class="mb-0" style="font-weight: bold;">以上为C豆兑换使用协议的具体内容，如果您同意本协议，请点击“我同意”继续使用；如果您不同意，请点击“取消”退出。</p>        			</div>
+                    <p class="ft-12 ft-base mt-20 mb-0 text-left">查看完整版的<a href="/activity/cbean/extagreement" target="_blank" class="ft-gold" style="text-decoration: underline;">《C豆兑换使用协议》</a></p>
+        		</div>
+
+        		<div class="modal-footer">
+        				        			<button class="btn btn-blue cdouCancel" data-dismiss="modal">取消</button>
+	        		
+        			<button class="btn btn-orange cdouAgree" data-module="c_cdou_new">Agree</button>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>
+<!--C豆补充协议-->
+<div id="J_CbeanExtAgreement" class="gx-modal-agreement modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+        <div class="modal-middle">
+        	<div class="modal-content">
+        		<div class="modal-header">
+        			<h4 class="modal-title">
+                        C豆补充协议                    </h4>
+        		</div>
+
+        		<div class="modal-body">
+        			<div class="text-left ft-14 ft-base pr-20" style="height: 240px;overflow-y: auto;">
+        				<p class="mb-30">根据您与杭州星巢网络科技有限公司（以下简称“星巢网络”）签订的《c豆兑换使用协议》（以下简称“原协议”），现星巢网络向您提供c豆抵扣手续费的服务，在使用该服务前，请认真阅读以下条款：</p>
+
+<ul class="mb-30">
+	<li>1、星巢网络将向您提供c豆抵扣交易手续费的服务，具体规则见6月份C豆处理方案，您同意本次的c豆抵扣手续费服务仅针对2019年6月。</li>
+	<li>2、您同意c豆为星巢网络的一项用户积分系统，仅为星巢网络为用户提供相关服务的工具。</li>
+	<li>3、您同意您对依据原协议获得的c豆仅享有使用权，星巢网络充分尊重您在星巢网络“c豆使用规则”下对c豆的使用方式。</li>
+	<li>4、您同意星巢网络对c豆的运营方案，星巢网络将依据实际情况调整c豆的运营方式、使用时间或使用功能等。</li>
+	<li>5、若您对c豆使用有更好的建议，您可联系客服部门（feedback@c5game.com），星巢网络将汇总您的建议并依据实际情况决定是否采纳，以期满足更多用户对c豆的期望。</li>
+	<li>6、本协议为原协议的补充协议，与原协议有冲突之处，以本协议为准。</li>
+	<li>7、以上条款星巢网络享有最终解释权。</li>
+</ul>
+
+<p class="mb-0" style="font-weight: bold;">以上为c豆兑换使用协议的补充内容，如果您同意本补充内容，请点击“我同意”；如果您不同意本补充内容，您将不享受本次c豆抵扣手续费的服务，但您可以依据原协议的约定在星巢网络出具的相关规则下继续使用c豆，请点击“取消”退出。</p>
+        			</div>
+        			<p class="ft-12 ft-base mt-20 mb-0 text-left">查看完整版的<a href="/activity/cbean/extagreement" target="_blank" class="ft-gold" style="text-decoration: underline;">《C豆补充协议》</a></p>
+        		</div>
+
+        		<div class="modal-footer">
+        				        			<button class="btn btn-blue cdouCancel" data-dismiss="modal">取消</button>
+	        		
+        			<button class="btn btn-orange cdouAgree" data-module="c_cdou_ex">Agree</button>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>
+<!--以下需要全站显示，得把这块放到main文件下-->
+<div class="falsh-info"
+     style="background: url('https://static.c5game.com/images/activity/flashsale/right-infoen.png?v=20200110135322')"></div>
+
+<!--风险确认-->
+<script>
+    $(document).on("click", ".riskAgree", function () {
+        $.ajax({
+            type:"post",
+            url:"/api/user/AgreeUserAgreement",
+            dataType:"json",
+            data:{
+                module:$("#riskWarning-type").data("type")
+            },
+            success:function(e){
+                if (e.status == 200){
+                    $("#deposit-riskWarning").modal('hide');
+                    $("#buy-riskWarning").modal('hide');
+                } else {
+                    $.showErrorMessage({"content": e.message});
+                }
+            },
+            error:function(){
+            }
+        });
+    });
+    $(document).on("click", ".modal-off", function () {
+        $("#deposit-riskWarning").modal('hide');
+        $("#buy-riskWarning").modal('hide');
+    })
+</script>
+
+<!--C豆确认-->
+<script>
+    $(document).on("click", ".cdouCancel", function () {
+        $.cookie('showCbeanAgreement', -1, {
+            expires: 1
+        });
+    });
+
+    $(document).on("click", ".cdouAgree", function () {
+        var jThis = $(this),
+            oData = {
+                "module": jThis.data("module")
+            }
+        ;
+
+        $.post("/api/user/AgreeUserAgreement", oData).success(function (e) {
+            if (e.status == 200) {
+                if(oData.module == "c_cdou_new"){
+                    $("#J_CbeanAgreement").modal('hide');
+                }else if(oData.module == "c_cdou_ex"){
+                    $("#J_CbeanExtAgreement").modal('hide');
+                }else{
+                    $("#compensate-cdou").modal('hide');
+                }
+            }
+        })
+    });
+</script>
+
+<script>
+    $(function () {
+        $(".newyear-btn").on("click", function () {
+            $("#newyearLink").modal('hide');
+        })
+
+        function closeFlash() {
+            $('.falsh-info').animate({right: "-230"}, 1000);
+        }
+
+        $('.flash-close-btn').on('click', function () {
+
+            $.cookie('falshNotice', 'close', {expires: 0.5});
+
+            closeFlash();
+        });
+
+        if ($.cookie("falshNotice") != null) {
+            $('.falsh-info').addClass('hide')
+        }
+        ;
+
+    });
+</script>
+
+<input type="hidden" id="login-setting-url" value="/user/login/setting.html">
+
+<!--绑定引导modal-->
+<div class="modal fade" id="bind-guide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-body" style="padding-bottom: 40px; min-width: 440px;">
+                    <h3 class="text-center ft-white">Welcome to C5GAME</h3>
+                    <p style="padding: 0 40px;max-width: 410px;">
+                        Dear user, welcome to C5GAME. To protect your safety and experience, please complete your profile soon.                    </p>
+                    <div class="clearfix" style="width: 410px;padding: 0 40px;">
+                        <img class="pull-left mr-5 top-5" src="/images/guide/steam.png" width="32" alt="">
+                        <div class="pull-left" style="width: 290px">
+                            <p class="ft-white mb-0 ft-16">Bind Steam</p>
+                            <p class="mb-0">To bind Steam will make your C5 account have more permission</p>
+                        </div>
+                    </div>
+                    <div class="clearfix mt-10" style="width: 410px;padding: 0 40px;">
+                        <img class="pull-left mr-5 top-5" src="/images/guide/link.png" width="32" alt="">
+                        <div class="pull-left" style="width: 290px">
+                            <p class="ft-white mb-0 ft-16">Set Steam trade link</p>
+                            <p class="mb-0">No link, no trade, trade link is the bridge which connects Steam inventory and C5</p>
+                        </div>
+                    </div>
+                    <div class="clearfix mt-10" style="width: 410px;padding: 0 40px;">
+                        <img class="pull-left mr-5 top-5" src="/images/guide/phone.png" width="32" alt="">
+                        <div class="pull-left" style="width: 290px">
+                            <p class="ft-white mb-0 ft-16">Bind phone number</p>
+                            <p class="mb-0">To bind phone will make your C5 account more safe</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-20">
+                        <a type="button" id="guideSetting" style="width: 323px;" class="btn btn-blue" href="/user/setting.html">Bind</a>
+                        <a type="button" style="display: block ;margin-top: 10px"  href="#"  data-dismiss="modal">Next time</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--新手引导modal-->
+<div class="modal fade hide" id="new-help" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-middle">
+            <div class="modal-content">
+                <div class="modal-body" style="padding-bottom: 40px;">
+                    <h3 class="text-center ft-white">Welcome to C5GAME</h3>
+                    <p style="padding: 0 40px;max-width: 480px;">
+                        Dear user, welcome to C5GAME. We carefully prepare a Newbie Guide for you, you can decide to watch it according to your requirement!                    </p>
+                    <div class="text-center mt-40">
+                        <a type="button" class="mr-20" href="/default/default/guide.html" style="display: inline-block;width: 135px;height: 35px;line-height: 33px;color: #e4b35a;border:1px solid #e4b35a;border-radius: 4px;">Watch Newbie Guide</a>
+                        <a type="button"  style="display: inline-block;width: 135px;height: 35px;line-height: 33px;color: #999999;border:1px solid #999999;border-radius: 4px;" href="#"  data-dismiss="modal">Sorry, I am an insider</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        $('.language-select ul').prepend($('.language-select ul li.active'));
+
+
+        $.get('/user/login/status.html', function (res) {
+
+            $("#login-cpanl").html(res);
+        });
+
+        $.get('/activity/flashsale/flashAlert.html', function (res) {
+
+            $(".falsh-info").html(res);
+        });
+
+        $('#verify-query').mouseenter(function () {
+            var verifybox = template('verify-query-tmpl', {
+                type: 1,
+                time: new Date().getTime()
+            });
+            $(this).next('.hoverBox').html(verifybox);
+        });
+
+        $("[data-url]").each(function () {
+            var $this = $(this);
+            if ($(this).attr("data-tpl")) {
+                //是否需要JS进行分页
+                if ($this.data('pagination')) {
+                    $this.pagination({
+                        requestUrl: $this.data('url'),
+                        templateId: $this.data('tpl'),
+                        dataContainer: $this,
+                        enableUrlPage: $this.data('enable-page') == 1
+                    });
+                } else {
+                    $.ajax({
+                        url: $this.attr('data-url'),
+                        dataType: 'jsonp',
+                        success: function (json) {
+
+                            var content = template($this.attr('data-tpl'), json);
+
+                            $($this).html(content);
+                        }
+                    });
+                }
+            }
+        });
+
+        // 左侧菜单栏sticky
+        $('.account-left').sticky({
+            topSpacing: 0,
+            bottomSpacing: $("#footer").outerHeight(),
+            zIndex: 998
+        });
+
+        $('.remote-dailog-modal').on('hidden.bs.modal', function (e) {
+
+            var target = $(e.target);
+
+            target.removeData('bs.modal').find(".modal-body").html('');
+        });
+
+        // 底部banner
+        var $amountDom = $('.banner-sell');
+
+        $('#close-banner').on('click', function () {
+
+            $.cookie('bannerSwitch', 'close', {expires: 7});
+
+            $amountDom.addClass('hide');
+        });
+
+        $(document).on('click', '.notice-remove', function () {
+            if($(this).data('type') == 'redlock'){
+                var time = $(this).data('time');
+
+                $.cookie('C5Notice' + time, 'close', {expires: 7, path: '/'});
+
+                $('.top-notice').addClass('hide');
+            }
+            if(localStorage){
+                if(localStorage.C5Noticelist){
+                    var C5Noticelistid =JSON.parse(localStorage.C5Noticelist)
+                }else{
+                    C5Noticelistid=[]
+                }
+                C5Noticelistid.push($(this).data('id').toString())
+                localStorage.setItem("C5Noticelist",JSON.stringify(C5Noticelistid))
+            }
+            $(this).closest('.item').remove()
+            if($('#slidershow').find('.item').length == 0 ){
+                $('#top-notice-content').addClass('hide')
+            }else{
+                $('#slidershow').find('.item').eq(0).addClass("active")
+            }
+            $('#slidershow').carousel()
+        });
+        // $(document).on('click', '.notice-cookie-remove', function () {
+
+        //     var time = $(this).data('time');
+        //     $.cookie('C5Message' + time, 'close', {expires: 7, path: '/'});
+        //     var url = $(this).data('url');
+        //     location.href = url;
+        // });
+
+        // 切换游戏
+        $(document).on('click', '.change-game-btn', function () {
+
+            var url = $(this).data('url');
+
+            $.post(url, {}, function (json) {
+
+                if (json.status === 200) {
+
+                    window.location.reload();
+                } else {
+                    jQuery.showErrorMessage(json.message);
+                }
+            }, 'json');
+
+        });
+
+    });
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') === -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') === -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    };
+    if (browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+        browser.versions.iPhone || browser.versions.iPad) {
+        $('#foot-banner').addClass('hide');
+        $('.ad-area').remove();
+        //--------------------------------------------------app 入口
+        var local_url = window.location.href;
+
+                    if (local_url.indexOf('help') > -1 || local_url.indexOf('activity') > -1 || local_url.indexOf('roll') > -1 || local_url.indexOf('wiki') > -1) {
+
+            } else {
+                // if (local_url == 'https://www.c5game.com/' && !$.cookie('no_more_7d')) {
+                //     localStorage.url = 'https://www.c5game.com/'
+                //     window.location.href = '/default/default/appEntrance'
+                // } // 首页走次通道
+
+                // if (local_url !== 'https://www.c5game.com/' && !$.cookie('no_more_7d') && !$.cookie('no_more_6h')) {
+                //     window.location.href = '/default/default/appEntrance'
+                // } // 非首页走此通道
+
+                // if ($.cookie('no_more_7d') == 'pc') {
+                //     // 符合 no_more_7d 直接跳转
+                // } else if ($.cookie('no_more_7d') == 'app') {
+                //     // 符合 no_more_7d 直接跳转
+                //     window.location.href = 'https://m.c5game.com'
+                // }
+
+            }
+        
+        //--------------------------------------------------app 入口
+    }
+
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?86084b1bece3626cd94deede7ecf31a8";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+
+
+    // 提示浏览器升级
+    function myBrowser(){
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+        var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+        var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+        var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器
+        if (isIE) {
+            var IE5 = IE55 = IE6 = IE7 = IE8 = false;
+            var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+            reIE.test(userAgent);
+            var fIEVersion = parseFloat(RegExp["$1"]);
+            IE55 = fIEVersion == 5.5;
+            IE6 = fIEVersion == 6.0;
+            IE7 = fIEVersion == 7.0;
+            IE8 = fIEVersion == 8.0;
+
+            // ie浏览器且版本过低时提示升级
+            if (IE55 || IE6 || IE7 || IE8) {
+                window.location.href = '/default/error/update';
+            }
+        }
+        if (isFF) {
+            return "FF";
+        }
+        if (isOpera) {
+            return "Opera";
+        }
+    };
+            myBrowser();
+    </script>
+
+<script>
+    var msgflag = false;
+
+    function setflag(visibility) {
+        if (visibility === 'visible') {
+            msgflag = false;
+        } else {
+            msgflag = true;
+        }
+    }
+
+    function unreadMsg(msg) {
+        var text = '',
+            num = 0;
+        if (msg === 'hasBeenRead') { // 消息已被阅读
+            num = 0;
+        } else if (typeof(msg) === 'object') {
+            var num = msg.length;
+        }
+        _MEIQIA('getPanelVisibility', setflag());
+        // 未读消息数量
+        if (num > 0) {
+            if (msgflag) {
+                document.getElementById('unreadNum').innerHTML = '+1';
+                $("#unreadNum").show();
+            } else {
+                $("#unreadNum").hide();
+            }
+        } else {
+            $("#unreadNum").hide();
+        }
+        // 最后一条消息的内容
+    }
+</script>
+<script>
+
+    $(".service").click(function () {
+        openService()
+    })
+
+    function openService() {
+            }
+
+    $(document).on('click', '.reload-window', function () {
+        window.location.reload();
+    })
+</script>
+<script>
+    function getHref(res){
+        if(res.type=='token'){
+            if(res.status==0){
+                return '/user/setting.html'
+            }else{
+                return 'javascript:void(0)'
+            }
+        }else if(res.type=='public'){
+            if(res.status==0){
+                return 'https://steamcommunity.com/id/hzpm/edit/settings/'
+            }else{
+                return 'javascript:void(0)'
+            }
+        }else if(res.type=='hanging'){
+            if(res.status==0){
+                // return 'https://steamcommunity.com/id/hzpm/edit/settings/'
+                return '/help.html?pid=542383106'
+            }else{
+                return 'javascript:void(0)'
+            }
+        }else if(res.type=='tradeable'){
+            if(res.status==0){
+                return '/help.html?pid=542382984'
+            }else{
+                return 'javascript:void(0)'
+            }
+        }else if(res.type=='apikey'){
+            if(res.status==0){
+                return '/user/setting.html'
+            }else{
+                return 'javascript:void(0)'
+            }
+        }
+    };
+
+    function tipText(res){
+        if(res.type=='token'){
+            if(res.status==0){
+                return '重新填写'
+            }else if(res.status==-1){
+                return '未知'
+            }
+        }else if(res.type=='public'){
+            if(res.status==0){
+                return '前往公开'
+            }else if(res.status==-1){
+                return '未知'
+            }
+        }else if(res.type=='hanging'){
+            if(res.status==0){
+                return '查看帮助'
+            }else if(res.status==-1){
+                return '未知'
+            }
+        }else if(res.type=='tradeable'){
+            if(res.status==0){
+                return '查看帮助'
+            }else if(res.status==-1){
+                return '未知'
+            }
+        }else if(res.type=='apikey'){
+            if(res.status==0){
+                return '重新设置'
+            }else if(res.status==-1){
+                return '未知'
+            }
+        }
+    }
+
+
+    template.helper('getHref',function(res){
+        return getHref(res)
+    });
+
+    template.helper('tipText',function(res){
+        return tipText(res)
+    });
+</script>
+<script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=c3e158669dc947fb8138a6e62208fbd8" id="zhichiScript" class="zhiCustomBtn" data-args="manual=true"></script>
+<script language="JavaScript">
+    //初始化智齿咨询组件实例
+    var zhiManager = (getzhiSDKInstance());
+    //再调用load方法
+    zhiManager.on("load", function() {
+        zhiManager.initBtnDOM();
+    });
+    zhiManager.set('customBtn', 'true');
+    zhiManager.set('tel', '13588737694');   //电话或手机
+    zhiManager.set('uname', '大爆炸');   //昵称
+    zhiManager.set('face', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/80/80053262dceda4e7f8575351799cf2c23430d432_full.jpg');   //头像URL
+    zhiManager.set('lan', 'en');
+    //对接用户身份、预留字段、自定义字段（新版，推荐）
+    var obj ={"customField3":"76561198972540829","customField4":"554100987"};
+    var objStr = JSON.stringify(obj);
+    zhiManager.set("customerFields", objStr);
+</script><script type="text/javascript" src="https://static.c5game.com/assets/script-2-Otiw1adL0TGzOkjrr4oHVw.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+	jQuery('#yw0').yiiListView({'ajaxUpdate':['yw0'],'ajaxVar':'ajax','pagerClass':'pager','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+});
+/*]]>*/
+</script>
+</body>
+</html>
