@@ -94,9 +94,35 @@ class C5Robot {
   getPriceInfo(id) {
     const that = this
 
-    function getSaleRequest(_id, isQuick) {
+    function getApiId(isSale) {
+      const url = `https://www.c5game.com/dota/${id}-${isSale ? 'S' : 'P'}.html`
+      return new Promise((res, rej) => {
+        request(url, (err, resp, body) => {
+          if (err) {
+            rej(err)
+          } else {
+            const $ = cheerio.load(body)
+            if (isSale) {
+              let td = $('#sale-body')
+              let _id = $(td).attr('data-url').match(/\?id=(\d*)&/)[1]
+              res(_id)
+            } else {
+              let tbody = $('.sale-item-table tbody[data-url]')
+              let _id = $(tbody).attr('data-url').match(/\?id=(\d*)&/)[1]
+              res(_id)
+            }
+          }
+        })
+      })
+    }
+
+    function getSaleRequest(_id, isPurchase = false, isQuick) {
       return new Promise((gRes, gRej) => {
-        const url = `https://www.c5game.com/api/product/sale.json?id=${_id}&quick=&gem_id=0&page=1&flag=&delivery=${isQuick ? 1 : 2}&sort=&b1=&style=`
+        let url = `https://www.c5game.com/api/product/sale.json?id=${_id}&quick=&gem_id=0&page=1&flag=&delivery=${isQuick ? 1 : 2}&sort=&b1=&style=`
+        if (isPurchase) {
+          url = `https://www.c5game.com/api/product/purchase.json?id=${_id}&page=1&_=${+new Date()}`
+        }
+        console.log(url)
         request(url, {
           headers: {
             Cookie: that.cookie
@@ -115,45 +141,38 @@ class C5Robot {
     }
 
     return new Promise((gRes, gRej) => {
-      request(`https://www.c5game.com/dota/${id}-S.html?quick=`, {
-        headers: {
-          Cookie: this.cookie
-        }
-      }, (err, resp, body) => {
-        if (err) {
-          gRej(err)
-        } else {
-          const $ = cheerio.load(body)
-          let td = $('#sale-body')
-          if (td.length) {
-            let _id = $(td).attr('data-url').match(/\?id=(\d*)&/)[1]
-            Promise.all([
-              getSaleRequest(_id, true),
-              getSaleRequest(_id, false)
-            ])
-              .then(([quickResp, manualResp]) => {
-                let _res = {
-                  quick: null,
-                  manual: null
-                }
-                if (quickResp.length) {
-                  _res.quick = quickResp[0]
-                }
-                if (manualResp.length) {
-                  _res.manual = manualResp[0]
-                }
-                gRes(_res)
-              })
-              .catch(err => {
-                console.log('get price info err', err)
-                gRej('get price info err')
-              })
-          } else {
-            gRej('未能找到对应apiurl')
-          }
-        }
-      })
-
+      Promise.all([
+        getApiId(true),
+        getApiId(false)
+      ])
+        .then(([saleId, purchaseId]) => {
+          Promise.all([
+            getSaleRequest(saleId, false, true),
+            getSaleRequest(saleId, false, false),
+            getSaleRequest(purchaseId, true)
+          ])
+            .then(([quickResp, manualResp, purchaseResp]) => {
+              let _res = {
+                quick: null,
+                manual: null,
+                purchase: null
+              }
+              if (quickResp.length) {
+                _res.quick = quickResp[0]
+              }
+              if (manualResp.length) {
+                _res.manual = manualResp[0]
+              }
+              if (purchaseResp.length) {
+                _res.purchase = purchaseResp[0]
+              }
+              gRes(_res)
+            })
+            .catch(err => {
+              console.log('get price info err', err)
+              gRej('get price info err')
+            })
+        })
     })
   }
 
