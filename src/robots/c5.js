@@ -14,6 +14,7 @@ class C5Robot {
     }
     this.steamBot = steamBot
     this.isLogin = false
+    this.loginDep = []
   }
 
   isLoginPage(htmlText) {
@@ -24,24 +25,22 @@ class C5Robot {
 
   login() {
     return new Promise(async (gRes, gRej) => {
-      if (this.isLogin) {
-        gRes()
-      } else {
+      this.loginDep.push({
+        res: gRes,
+        rej: gRej
+      })
+      if (!this.isLogin) {
         this.isLogin = true
-        try {
-          login(this.steamBot)
-            .then(cookie => {
-              this.cookie = cookie
-              this.isLogin = false
-              gRes()
-            })
-            .catch(e => {
-              gRej(e)
-            })
-        } catch (e) {
-          this.isLogin = false
-          gRej(e)
-        }
+        login(this.steamBot)
+          .then(cookie => {
+            this.cookie = cookie
+            this.loginDep.forEach(dep => dep.res())
+            this.isLogin = false
+          })
+          .catch(e => {
+            this.loginDep.forEach(dep => dep.rej(e))
+            this.isLogin = false
+          })
       }
     })
   }
@@ -176,31 +175,59 @@ class C5Robot {
     })
   }
 
+  // 判断是否登录
+  judgeIsLogin() {
+    const url = 'https://www.c5game.com/api/login/isLogin'
+    return new Promise((res, rej) => {
+      request(url, {
+        headers: {Cookie: this.cookie},
+        json: true
+      }, (err, resp, body) => {
+        if (err) {
+          rej(err)
+        } else {
+          if (body.status === 403 || body.status === 401) {
+            res(false)
+          } else {
+            res(true)
+          }
+        }
+      })
+    })
+  }
+
   // 下单买饰品
   async buyGoods(id) {
     try {
-      let params = await this._getOrderParams(id)
-      console.log('获取参数成功')
-      let orderId = await this._createOrder({
-        id: params.id,
-        paypwd: 816814,
-        'is_nopass': 'off',
-        price: params.price,
-        method: params.method,
-        coupon: '',
-        coupon_amount: '',
-        buy_secret: ''
-      })
-      console.log('下单成功')
-      let info = await this._sendTradeOffer(orderId)
-      console.log(info)
+      let isLogin = await this.judgeIsLogin()
+      if (!isLogin) {
+        console.log('登录失效，重新登录')
+        await this.login()
+        return this.buyGoods(id)
+      } else {
+        let params = await this._getOrderParams(id)
+        console.log('获取参数成功')
+        let orderId = await this._createOrder({
+          id: params.id,
+          paypwd: 816814,
+          'is_nopass': 'off',
+          price: params.price,
+          method: params.method,
+          coupon: '',
+          coupon_amount: '',
+          buy_secret: ''
+        })
+        console.log('下单成功')
+        let info = await this._sendTradeOffer(orderId)
+        console.log(info)
+      }
     } catch (e) {
       console.log(e)
       return Promise.reject(e)
     }
   }
 
-  // 获取饰品下单参数
+// 获取饰品下单参数
   _getOrderParams(id) {
     const url = `https://www.c5game.com/default/order/quick?id=${id}`
     return new Promise((gRes, gRej) => {
@@ -240,7 +267,7 @@ class C5Robot {
     })
   }
 
-  // 创建订单
+// 创建订单
   _createOrder(params) {
     const url = `https://www.c5game.com/api/order/payment.json`
     return new Promise((gRes, gRej) => {
@@ -266,7 +293,7 @@ class C5Robot {
     })
   }
 
-  // 发起报价
+// 发起报价
   _sendTradeOffer(id) {
     const url = 'https://www.c5game.com/api/order/create-receive-offer'
     return new Promise((gRes, gRej) => {
