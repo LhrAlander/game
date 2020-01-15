@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer')
 
 async function login(bot) {
+  let isInfoFilled = false
   return new Promise(async (gRes, gRej) => {
     try {
       const url = 'https://buff.163.com/account/login'
@@ -16,6 +17,9 @@ async function login(bot) {
       await buffPage.goto(url)
       let steamBrowser = null
       browser.on('targetcreated', async function (target) {
+        if (isInfoFilled) {
+          return
+        }
         steamBrowser = await target.browser()
         const pages = await steamBrowser.pages()
         let page = pages.filter(_ => _.url().includes('steam'))[0]
@@ -26,6 +30,7 @@ async function login(bot) {
         await page.waitFor('#twofactorcode_entry', {visible: true})
         let code = await bot.get2faCode()
         await page.type('#twofactorcode_entry', code, {delay: 50})
+        isInfoFilled = true
         page.click('#login_twofactorauth_buttonsets #login_twofactorauth_buttonset_entercode .auth_button.leftbtn')
         await buffPage.waitFor('.login-user')
         let cookies = await buffPage.cookies()

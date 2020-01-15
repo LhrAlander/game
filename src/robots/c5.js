@@ -95,6 +95,7 @@ class C5Robot {
 
     function getApiId(isSale) {
       const url = `https://www.c5game.com/dota/${id}-${isSale ? 'S' : 'P'}.html`
+      console.log(url)
       return new Promise((res, rej) => {
         request(url, (err, resp, body) => {
           if (err) {
@@ -130,10 +131,14 @@ class C5Robot {
         }, (err, resp, body) => {
           if (err) {
             gRej(err)
-          } else if (body.status !== 200) {
+          } else if (resp.statusCode !== 200) {
             gRej(body)
           } else {
-            gRes(body.body.items)
+            if (body.status === 404) {
+              gRes([])
+            } else {
+              gRes(body.body.items)
+            }
           }
         })
       })
@@ -206,8 +211,7 @@ class C5Robot {
         return this.buyGoods(id)
       } else {
         let params = await this._getOrderParams(id)
-        console.log('获取参数成功')
-        let orderId = await this._createOrder({
+        let {orderId, receive_method} = await this._createOrder({
           id: params.id,
           paypwd: 816814,
           'is_nopass': 'off',
@@ -217,12 +221,12 @@ class C5Robot {
           coupon_amount: '',
           buy_secret: ''
         })
-        console.log('下单成功')
-        let info = await this._sendTradeOffer(orderId)
-        console.log(info)
+        return {
+          orderId,
+          receiveMethod: receive_method
+        }
       }
     } catch (e) {
-      console.log(e)
       return Promise.reject(e)
     }
   }
@@ -254,7 +258,10 @@ class C5Robot {
                 balance_enough
               }
             } = body
-            let method = methods.some(_ => _.type === 1) ? 1 : 2
+            let method =
+              methods.some(_ => _.type === 1)
+                ? 1
+                : 3
             gRes({
               id,
               name: item_name,
@@ -294,7 +301,7 @@ class C5Robot {
   }
 
 // 发起报价
-  _sendTradeOffer(id) {
+  sendTradeOffer(id) {
     const url = 'https://www.c5game.com/api/order/create-receive-offer'
     return new Promise((gRes, gRej) => {
       request.post(
@@ -320,6 +327,195 @@ class C5Robot {
       )
     })
   }
+
+  // 查询人工发货列表
+  checkManualList() {
+    function parseHtml(htmlText) {
+      const $ = cheerio.load(htmlText)
+      const buttons = $('.j_Cancel')
+      let _res = []
+      if (buttons.length) {
+        buttons.each((index, button) => {
+          let id = $(button).attr('data-id')
+          let canCancel = !$(button).attr('class').includes('disable')
+          _res.push({
+            id,
+            canCancel
+          })
+        })
+      }
+      return _res
+    }
+
+    const url = `https://www.c5game.com/user/order/buyerHistory.html?page=1&appid=&sell_type=1&buy_type=&status=3`
+    return new Promise((gRes, gRej) => {
+      request(url, {
+        headers: {
+          Cookie: this.cookie
+        }
+      }, (err, resp, body) => {
+        if (err) {
+          gRej(err)
+        } else if (resp.statusCode === 401 || resp.statusCode === 403) {
+          this.login()
+            .then(() => this.checkManualList())
+            .then(gRes)
+            .catch(gRej)
+        } else {
+          gRes(parseHtml(body))
+        }
+      })
+    })
+  }
+
+  // 取消人工发货订单
+  cancelManualOrder(id) {
+    const url = `https://www.c5game.com/api/order/selfCancelOrder`
+    return new Promise((gRes, gRej) => {
+      request.post(
+        url,
+        {
+          formData: {
+            id
+          },
+          headers: {
+            Cookie: this.cookie
+          },
+          json: true
+        },
+        (err, resp, body) => {
+          if (err) {
+            gRej(err)
+          } else if (resp.statusCode === 401 || resp.statusCode === 403) {
+            this.login()
+              .then(() => this.cancelManualOrder(id))
+              .then(gRes)
+              .catch(gRej)
+          } else {
+            gRes(body)
+          }
+        }
+      )
+    })
+  }
+
+  // 获取背包中的饰品
+  getGoodsInBag() {
+    function parseHtml(htmlText) {
+      const $ = cheerio.load(htmlText)
+      const items = $('.item.waitWithDraw')
+      let _res = []
+      items.each((index, item) => {
+        const input = $(item).find('input[name="id[]"]')
+        const name = $(item).find('.name-ellipsis a').text().trim()
+        const id = input.attr('value')
+        _res.push({
+          name,
+          id
+        })
+      })
+      return _res
+    }
+
+    const url = `https://www.c5game.com/user/inventory/withdraw.html?appid=570`
+    return new Promise((gRes, gRej) => {
+      request(url, {
+        headers: {
+          Cookie: this.cookie
+        }
+      }, (err, resp, body) => {
+        if (err) {
+          gRej(err)
+        } else if (resp.statusCode === 401 || resp.statusCode === 403) {
+          this.login()
+            .then(() => this.getGoodsInBag())
+            .then(gRes)
+            .catch(gRej)
+        } else {
+          gRes(parseHtml(body))
+        }
+      })
+    })
+  }
+
+  // 取回背包中的饰品至steam
+  withdrawGoods(id) {
+    const url = `https://www.c5game.com/api/inventory/withdarw.json`
+    const formData = {
+      appid: 570,
+      'id[]': id
+    }
+    return new Promise((gRes, gRej) => {
+      request.post(
+        url,
+        {
+          formData,
+          headers: {
+            Cookie: this.cookie
+          },
+          json: true
+        },
+        (err, resp, body) => {
+          if (err) {
+            gRej(err)
+          } else if (resp.statusCode === 401 || resp.statusCode === 403) {
+            this.login()
+              .then(() => this.withdrawGoods(id))
+              .then(gRes)
+              .catch(gRej)
+          } else {
+            console.log(resp.statusCode)
+            if (body.status === 200) {
+              gRes({
+                success: true
+              })
+            } else {
+              gRes({
+                success: false,
+                data: body
+              })
+            }
+          }
+        }
+      )
+    })
+  }
+
+  // 判断c5机器人报价状态
+  getC5Robots() {
+    const url = `https://www.c5game.com/api/offer/tracker.json?from=inventory`
+    return new Promises((gRes, gRej) => {
+      request(url, {
+        headers: {
+          Cookie: this.cookie
+        },
+        json: true
+      }, (err, resp, body) => {
+        if (err) {
+          gRej(err)
+        } else if (resp.statusCode === 401 || resp.statusCode === 403) {
+          this.login()
+            .then(() => this.getC5Robots())
+            .then(gRes)
+            .catch(gRej)
+        } else {
+          if (body.status === 404) {
+            gRes([])
+          } else {
+            let _res = body
+              .body
+              .filter(trade => trade.operation.status === 1 && trade.operation.message.includes('交易报价发送成功'))
+              .map(trade => ({
+                partenerInfo: { name: trade.bot.name },
+                id: trade.operation.url.match(/tradeoffer\/(\d*)/)[1]
+              }))
+            gRes(_res)
+          }
+        }
+      })
+    })
+  }
 }
 
-module.exports = C5Robot
+module
+  .exports = C5Robot

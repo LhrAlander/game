@@ -3,6 +3,15 @@ const Goods = require('../models/Goods')
 const {getAllGoodsByHero: buffGetGoods} = require('./buff')
 const {getAllGoodsByHero: c5GetGoods} = require('./c5')
 
+const Robot = require('../robots/buff')
+const SteamBot = require('../../../steamAPI/src/scripts/Steam')
+const account = require('../../../steamAPI/src/config/accounts/alanderlt')
+
+const bot = new SteamBot(account)
+
+const buffRobot = new Robot(bot)
+
+
 function getAllHeros() {
   return new Promise((resolve, reject) => {
     let _heros = []
@@ -34,7 +43,7 @@ function flushGoodsByHero(hero) {
   return new Promise((resolve, reject) => {
     Promise.all([
       c5GetGoods(hero.c5name),
-      buffGetGoods(hero.buffname),
+      buffGetGoods(hero.buffname, buffRobot),
       Goods.destroy({where: {heroname: hero.name}})
     ])
       .then(([c5Goods, buffGoods]) => {
@@ -74,23 +83,24 @@ function flushGoodsByHero(hero) {
 
 async function flushGoods() {
   const heros = await getAllHeros()
-  function _next() {
-    if (heros.length) {
-      flushGoodsByHero(heros.shift())
-        .then(() => {
-          _next()
-        })
-        .catch(err => {
-          console.log(err)
-        })
+  return new Promise((gRes, gRej) => {
+    function _next() {
+      if (heros.length) {
+        flushGoodsByHero(heros.shift())
+          .then(() => {
+            _next()
+          })
+          .catch(err => {
+            console.log(err)
+            gRej(err)
+          })
+      } else {
+        gRes()
+      }
     }
-  }
-
-  try {
     _next()
-  } catch (err) {
-    console.log(err)
-  }
+  })
+
 }
 
 module.exports = {

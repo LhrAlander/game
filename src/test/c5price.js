@@ -7,7 +7,7 @@ const bot = new SteamBot(account)
 const log = console.log.bind(console)
 const c5Robot = new Robot(bot)
 
-c5Robot.getPriceInfo(553481224)
+c5Robot.getPriceInfo(516)
   .then(log)
   .catch(log)
 
