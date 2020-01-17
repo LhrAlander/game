@@ -9,7 +9,6 @@ bot.setMachineAuth(account.machineAuth)
 async function checkTrade() {
   try {
     let offers = await bot.getAllTradeOffers()
-    console.log(offers)
     if (offers.length) {
       let res = await bot.acceptTradeOffer(offers[0].id, offers[0].pid)
       console.log(`确认报价成功: ${res}`)

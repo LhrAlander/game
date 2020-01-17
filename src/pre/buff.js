@@ -62,7 +62,7 @@ function getAllGoodsByHero(name, bot) {
           } else {
             try {
               if (!body.data) {
-                console.log(body)
+                (body)
                 if (body.code && body.code === 'Login Required') {
                   bot.login().then(_cookie => {
                     getAllGoodsByHero(name, bot)

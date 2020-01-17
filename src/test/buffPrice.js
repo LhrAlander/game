@@ -7,6 +7,10 @@ const bot = new SteamBot(account)
 const log = console.log.bind(console)
 const buffRobot = new Robot(bot)
 
-buffRobot.getPriceInfo(27586)
-  .then(log)
-  .catch(log)
+// buffRobot.getPriceInfo(27586)
+//   .then(log)
+//   .catch(log)
+
+buffRobot.checkManualList()
+  .then(res => console.log(res))
+  .catch(res => console.log(res))
